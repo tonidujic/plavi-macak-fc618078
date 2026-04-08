@@ -4,6 +4,7 @@ import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
+import TypewriterText from "@/components/TypewriterText";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -91,10 +92,8 @@ const Hero = () => (
         <p className="text-xl md:text-2xl font-light mb-2 text-white/80 tracking-widest uppercase">
           Fitness Centar
         </p>
-        <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg">
-          Vrhunski opremljena teretana u srcu Viteza
-          <br />
-          <span className="text-sm">Etno selo Čardaci</span>
+        <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg h-14">
+          <TypewriterText text="Vrhunski opremljena teretana u srcu Viteza" speed={50} delay={800} />
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -265,7 +264,7 @@ const Location = () => (
           <div className="rounded-xl overflow-hidden shadow-warm border border-border">
             <iframe
               title="Plavi Mačak lokacija"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.5!2d17.7867!3d44.1547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee1c5e7cbe2ab%3A0x0!2zNDTCsDA5JzE3LjAiTiAxN8KwNDcnMTIuMCJF!5e0!3m2!1shr!2sba!4v1700000000000"
+              src="https://maps.google.com/maps?q=5Q7G%2BP6F,+Vitez,+Bosnia+%26+Herzegovina&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

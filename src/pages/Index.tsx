@@ -342,6 +342,7 @@ const Index = () => (
     <Navbar />
     <Hero />
     <About />
+    <Gallery />
     <Services />
     <Schedule />
     <Location />

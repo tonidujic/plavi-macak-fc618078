@@ -96,16 +96,16 @@ const Hero = () => (
         <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg h-14">
           <TypewriterText text="Vrhunski opremljena teretana u srcu Viteza" speed={50} delay={800} />
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
           <a
             href="#o-nama"
-            className="inline-block bg-gradient-primary text-primary-foreground font-bold px-8 py-3.5 rounded-full shadow-glow hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block bg-gradient-primary text-primary-foreground font-bold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full shadow-glow hover:scale-105 transition-all duration-300 text-base sm:text-lg"
           >
             Saznaj više
           </a>
           <a
             href="#kontakt"
-            className="inline-block bg-gradient-accent text-accent-foreground font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block bg-gradient-accent text-accent-foreground font-bold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full hover:scale-105 transition-all duration-300 text-base sm:text-lg"
           >
             Kontaktiraj nas
           </a>

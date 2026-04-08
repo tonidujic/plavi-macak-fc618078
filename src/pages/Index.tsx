@@ -92,10 +92,8 @@ const Hero = () => (
         <p className="text-xl md:text-2xl font-light mb-2 text-white/80 tracking-widest uppercase">
           Fitness Centar
         </p>
-        <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg">
-          Vrhunski opremljena teretana u srcu Viteza
-          <br />
-          <span className="text-sm">Etno selo Čardaci</span>
+        <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg h-14">
+          <TypewriterText text="Vrhunski opremljena teretana u srcu Viteza" speed={50} delay={800} />
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

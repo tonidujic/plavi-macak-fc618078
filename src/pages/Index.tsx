@@ -5,6 +5,7 @@ import heroBg from "@/assets/hero-bg.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
+import Gallery from "@/components/Gallery";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

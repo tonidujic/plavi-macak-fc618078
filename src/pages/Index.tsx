@@ -1,5 +1,4 @@
 import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap } from "lucide-react";
-import heroImg from "@/assets/hero-gym.jpg";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => (

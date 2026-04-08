@@ -50,6 +50,26 @@ const Hero = () => (
       </div>
     </div>
   </section>
+
+  {/* Instagram Video */}
+  <section className="py-24 px-4 bg-card">
+    <div className="container mx-auto max-w-2xl text-center">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Pogledajte <span className="text-gradient">nas</span></h2>
+      <div className="w-16 h-1 bg-gradient-primary mx-auto mb-10 rounded-full" />
+      <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm border border-border">
+        <iframe
+          src="https://www.instagram.com/reel/DTAUfj1CrW_/embed/"
+          width="100%"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+          allowTransparency
+          allow="encrypted-media"
+          title="Plavi Mačak Fitness video"
+        />
+      </div>
+    </div>
+  </section>
 );
 
 const About = () => (

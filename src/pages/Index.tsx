@@ -23,9 +23,7 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <img src={heroImg} alt="Fitness centar Plavi Mačak" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-foreground/50" />
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
       <img src={logo} alt="Logo" width={120} height={120} className="mx-auto mb-8 drop-shadow-2xl rounded-full" />
       <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 text-card">

@@ -233,12 +233,12 @@ const Schedule = () => (
             {schedule.map((s, i) => (
               <div
                 key={s.day}
-                className={`flex items-center justify-between px-6 py-5 transition-colors duration-200 hover:bg-muted/50 ${
+                className={`flex flex-col sm:flex-row items-start sm:items-center justify-between px-4 sm:px-6 py-4 sm:py-5 gap-1 sm:gap-0 transition-colors duration-200 hover:bg-muted/50 ${
                   i < schedule.length - 1 ? "border-b border-border" : ""
                 }`}
               >
-                <span className="font-medium">{s.day}</span>
-                <span className="text-secondary font-bold text-lg">{s.hours}</span>
+                <span className="font-medium text-sm sm:text-base">{s.day}</span>
+                <span className="text-secondary font-bold text-base sm:text-lg">{s.hours}</span>
               </div>
             ))}
           </div>

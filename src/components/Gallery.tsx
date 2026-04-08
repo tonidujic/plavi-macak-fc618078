@@ -16,16 +16,6 @@ const images = [
   { src: gallery6, alt: "Tegovi i bumper ploče" },
 ];
 
-// Mosaic layout: [colSpan, rowSpan] for each image
-const mosaicLayout = [
-  "col-span-2 row-span-2",  // large
-  "col-span-1 row-span-1",  // small
-  "col-span-1 row-span-1",  // small
-  "col-span-1 row-span-2",  // tall
-  "col-span-1 row-span-1",  // small
-  "col-span-1 row-span-1",  // small
-];
-
 const Gallery = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
@@ -41,20 +31,25 @@ const Gallery = () => {
             Pogledajte kako izgleda naša teretana
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[200px] gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {images.map((img, i) => (
-              <AnimatedSection key={i} delay={i * 80} className={mosaicLayout[i]}>
+              <AnimatedSection
+                key={i}
+                delay={i * 100}
+                className={i === 0 ? "col-span-2 md:col-span-2 row-span-2" : ""}
+              >
                 <button
                   onClick={() => setSelected(i)}
-                  className="w-full h-full overflow-hidden rounded-xl border border-border shadow-warm group focus:outline-none focus:ring-2 focus:ring-primary relative"
+                  className="w-full h-full overflow-hidden rounded-xl border border-border shadow-warm group focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`w-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                      i === 0 ? "h-full min-h-[280px] md:min-h-[420px]" : "h-48 md:h-56"
+                    }`}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                 </button>
               </AnimatedSection>
             ))}

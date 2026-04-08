@@ -264,7 +264,7 @@ const Location = () => (
           <div className="rounded-xl overflow-hidden shadow-warm border border-border">
             <iframe
               title="Plavi Mačak lokacija"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=5Q7G%2BP6F%2C+Vitez%2C+Bosnia+%26+Herzegovina&zoom=16"
+              src="https://maps.google.com/maps?q=5Q7G%2BP6F,+Vitez,+Bosnia+%26+Herzegovina&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

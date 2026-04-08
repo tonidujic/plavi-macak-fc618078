@@ -96,16 +96,16 @@ const Hero = () => (
         <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg h-14">
           <TypewriterText text="Vrhunski opremljena teretana u srcu Viteza" speed={50} delay={800} />
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
           <a
             href="#o-nama"
-            className="inline-block bg-gradient-primary text-primary-foreground font-bold px-8 py-3.5 rounded-full shadow-glow hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block bg-gradient-primary text-primary-foreground font-bold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full shadow-glow hover:scale-105 transition-all duration-300 text-base sm:text-lg"
           >
             Saznaj više
           </a>
           <a
             href="#kontakt"
-            className="inline-block bg-gradient-accent text-accent-foreground font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block bg-gradient-accent text-accent-foreground font-bold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full hover:scale-105 transition-all duration-300 text-base sm:text-lg"
           >
             Kontaktiraj nas
           </a>
@@ -233,12 +233,12 @@ const Schedule = () => (
             {schedule.map((s, i) => (
               <div
                 key={s.day}
-                className={`flex items-center justify-between px-6 py-5 transition-colors duration-200 hover:bg-muted/50 ${
+                className={`flex flex-col sm:flex-row items-start sm:items-center justify-between px-4 sm:px-6 py-4 sm:py-5 gap-1 sm:gap-0 transition-colors duration-200 hover:bg-muted/50 ${
                   i < schedule.length - 1 ? "border-b border-border" : ""
                 }`}
               >
-                <span className="font-medium">{s.day}</span>
-                <span className="text-secondary font-bold text-lg">{s.hours}</span>
+                <span className="font-medium text-sm sm:text-base">{s.day}</span>
+                <span className="text-secondary font-bold text-base sm:text-lg">{s.hours}</span>
               </div>
             ))}
           </div>
@@ -304,13 +304,13 @@ const Contact = () => (
               <span className="font-medium">@plavi_macak_fitness</span>
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/fitnesscentarplavimacak/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-card border border-border rounded-xl px-6 py-4 shadow-warm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow group w-full sm:w-auto justify-center"
             >
               <Facebook className="w-6 h-6 text-secondary group-hover:scale-110 transition-transform duration-300" />
-              <span className="font-medium">Facebook</span>
+              <span className="font-medium">Fitness Centar Plavi Mačak</span>
             </a>
           </div>
         </div>

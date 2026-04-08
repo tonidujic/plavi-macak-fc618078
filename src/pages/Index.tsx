@@ -304,13 +304,13 @@ const Contact = () => (
               <span className="font-medium">@plavi_macak_fitness</span>
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/fitnesscentarplavimacak/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-card border border-border rounded-xl px-6 py-4 shadow-warm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow group w-full sm:w-auto justify-center"
             >
               <Facebook className="w-6 h-6 text-secondary group-hover:scale-110 transition-transform duration-300" />
-              <span className="font-medium">Facebook</span>
+              <span className="font-medium">Fitness Centar Plavi Mačak</span>
             </a>
           </div>
         </div>

@@ -23,33 +23,54 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
-    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-      <img src={logo} alt="Logo" width={120} height={120} className="mx-auto mb-8 drop-shadow-2xl rounded-full" />
-      <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 text-card">
-        PLAVI <span className="text-gradient">MAČAK</span>
-      </h1>
-      <p className="text-xl md:text-2xl font-light mb-2 text-card/80 tracking-widest uppercase">Fitness Centar</p>
-      <p className="text-card/70 mb-10 max-w-lg mx-auto text-lg">
-        Vrhunski opremljena teretana u srcu Viteza<br />
-        <span className="text-sm">Etno selo Čardaci</span>
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="#o-nama"
-          className="inline-block bg-gradient-primary text-primary-foreground font-bold px-8 py-3.5 rounded-lg shadow-glow hover:opacity-90 transition-opacity text-lg"
-        >
-          Saznaj više
-        </a>
-        <a
-          href="#kontakt"
-          className="inline-block bg-gradient-accent text-accent-foreground font-bold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity text-lg"
-        >
-          Kontaktiraj nas
-        </a>
+  <>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <img src={logo} alt="Logo" width={120} height={120} className="mx-auto mb-8 drop-shadow-2xl rounded-full" />
+        <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 text-card">
+          PLAVI <span className="text-gradient">MAČAK</span>
+        </h1>
+        <p className="text-xl md:text-2xl font-light mb-2 text-card/80 tracking-widest uppercase">Fitness Centar</p>
+        <p className="text-card/70 mb-10 max-w-lg mx-auto text-lg">
+          Vrhunski opremljena teretana u srcu Viteza<br />
+          <span className="text-sm">Etno selo Čardaci</span>
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#o-nama"
+            className="inline-block bg-gradient-primary text-primary-foreground font-bold px-8 py-3.5 rounded-lg shadow-glow hover:opacity-90 transition-opacity text-lg"
+          >
+            Saznaj više
+          </a>
+          <a
+            href="#kontakt"
+            className="inline-block bg-gradient-accent text-accent-foreground font-bold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity text-lg"
+          >
+            Kontaktiraj nas
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section className="py-24 px-4 bg-card">
+      <div className="container mx-auto max-w-2xl text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Pogledajte <span className="text-gradient">nas</span></h2>
+        <div className="w-16 h-1 bg-gradient-primary mx-auto mb-10 rounded-full" />
+        <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm border border-border">
+          <iframe
+            src="https://www.instagram.com/reel/DTAUfj1CrW_/embed/"
+            width="100%"
+            height="600"
+            frameBorder="0"
+            scrolling="no"
+            allowTransparency
+            allow="encrypted-media"
+            title="Plavi Mačak Fitness video"
+          />
+        </div>
+      </div>
+    </section>
+  </>
 );
 
 const About = () => (

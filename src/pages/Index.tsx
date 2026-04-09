@@ -287,7 +287,7 @@ const Location = () => (
 const Contact = () => (
   <>
     <SectionDivider variant="dots" />
-    <section id="kontakt" className="py-24 px-4 bg-background">
+    <section id="kontakt" className="py-24 px-4 bg-secondary/10">
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

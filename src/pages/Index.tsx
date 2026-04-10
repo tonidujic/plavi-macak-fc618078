@@ -8,6 +8,7 @@ import TypewriterText from "@/components/TypewriterText";
 import Gallery from "@/components/Gallery";
 import ScrollProgress from "@/components/ScrollProgress";
 import CounterSection from "@/components/CounterSection";
+import OstalaPonuda from "@/components/OstalaPonuda";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -651,6 +652,7 @@ const Index = () => (
     <Gallery />
     <Reviews />
     <Location />
+    <OstalaPonuda />
     <FAQ />
     <Contact />
     <Footer />

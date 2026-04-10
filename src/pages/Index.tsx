@@ -389,7 +389,7 @@ const Reviews = () => {
               {reviews.map((r) => (
                 <div
                   key={r.name}
-                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(var(--secondary)_/_0.15)] rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group overflow-visible"
+                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(42_85%_52%_/_0.15)] rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group overflow-visible"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, si) => (
@@ -511,7 +511,7 @@ const FAQ = () => {
             {faqItems.map((item, i) => (
               <AnimatedSection key={i} delay={i * 80}>
                 <div
-                  className="bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(var(--secondary)_/_0.15)] rounded-xl border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-glow"
+                  className="bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(42_85%_52%_/_0.15)] rounded-xl border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-glow"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}

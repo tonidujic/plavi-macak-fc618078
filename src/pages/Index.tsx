@@ -148,16 +148,16 @@ const Hero = () => {
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
             </p>
-            <div className="mx-auto max-w-md overflow-hidden shadow-warm" style={{ background: '#fff', borderRadius: '12px', border: '1px solid #dbdbdb' }}>
+            <div className="mx-auto max-w-md overflow-hidden shadow-glow" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 20px hsl(var(--primary) / 0.4)' }}>
               {/* Instagram header */}
-              <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #efefef' }}>
+              <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                    <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-white" />
+                    <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold leading-tight" style={{ color: '#262626' }}>plavi_macak_fitness</p>
-                    <p className="text-xs" style={{ color: '#00a676' }}>1414 pratitelja</p>
+                    <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
+                    <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
                   </div>
                 </div>
                 <a

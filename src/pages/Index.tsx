@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="logo-glow-wrap rounded-full transition-all duration-300">
+          <a href="#" className="logo-glow-wrap rounded-full transition-all duration-300 cursor-pointer">
             <img
               src={logo}
               alt="Plavi Mačak"
@@ -36,7 +36,7 @@ const Navbar = () => {
               height={44}
               className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110 relative z-10"
             />
-          </div>
+          </a>
           <div>
             <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
@@ -48,10 +48,10 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
           {[
-            { href: "#o-nama", label: "O nama" },
-            { href: "#galerija", label: "Galerija" },
             { href: "#usluge", label: "Usluge" },
             { href: "#recenzije", label: "Recenzije" },
+            { href: "#galerija", label: "Galerija" },
+            { href: "#o-nama", label: "O nama" },
             { href: "#lokacija", label: "Lokacija" },
           ].map((link) => (
             <a
@@ -107,8 +107,8 @@ const Hero = () => {
             height={110}
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)] uppercase">
-            PLAVI <span className="text-gradient">MAČAK</span>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)]">
+            Plavi <span className="text-gradient">Mačak</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-2 text-[hsl(0_0%_100%/0.8)] tracking-widest uppercase">
             Fitness Centar
@@ -119,13 +119,13 @@ const Hero = () => {
           <div className="flex flex-row gap-3 justify-center px-4">
             <a
               href="#o-nama"
-              className="inline-block bg-gradient-primary text-primary-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+              className="hero-btn inline-block bg-gradient-primary text-primary-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 text-sm sm:text-base"
             >
               Saznaj više
             </a>
             <a
               href="#kontakt"
-              className="inline-block bg-gradient-accent text-accent-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+              className="hero-btn inline-block bg-gradient-accent text-accent-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-300 text-sm sm:text-base border border-primary/20"
             >
               Kontaktiraj nas
             </a>
@@ -147,13 +147,13 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-2xl text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 uppercase">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
             <div className="section-line mx-auto mb-4" />
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
-              Pridružite se našim dinamičnim grupnim treninzima i trenirajte u motivirajućoj atmosferi
+              Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
             </p>
             <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border">
               <iframe
@@ -182,18 +182,24 @@ const About = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="section-line mx-auto mb-8" />
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            Fitness centar <strong className="text-foreground">Plavi Mačak</strong> smješten je u
-            Vitezu, unutar turističkog kompleksa{" "}
-            <strong className="text-foreground">Etno selo Čardaci</strong> (Poslovni Centar 96 Zona
-            2, Vitez 72250). Otvoren 2026. godine, nudimo vrhunski opremljenu teretanu za sve razine
-            spremnosti — od početnika do iskusnih sportaša. Naša misija je pomoći vam da postignete
-            svoje fitness ciljeve u motivirajućem i profesionalnom okruženju.
-          </p>
+          <div className="glass rounded-2xl p-8 md:p-12 gradient-border shadow-warm">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Fitness centar <strong className="text-foreground">Plavi Mačak</strong> smješten je u
+              Vitezu, unutar turističkog kompleksa{" "}
+              <strong className="text-foreground">Etno selo Čardaci</strong> (Poslovni Centar 96 Zona
+              2, Vitez 72250). Otvoren 2026. godine, nudimo vrhunski opremljenu teretanu za sve razine
+              spremnosti — od početnika do iskusnih sportaša.
+            </p>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto my-6 rounded-full" />
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Naša misija je pomoći vam da postignete
+              svoje fitness ciljeve u motivirajućem i profesionalnom okruženju.
+            </p>
+          </div>
         </div>
       </AnimatedSection>
     </section>
@@ -214,7 +220,7 @@ const Services = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             Naše <span className="text-gradient">usluge</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
@@ -253,7 +259,7 @@ const Schedule = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
@@ -284,7 +290,7 @@ const Location = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
@@ -295,7 +301,7 @@ const Location = () => (
           <div className="rounded-xl overflow-hidden shadow-warm gradient-border">
             <iframe
               title="Plavi Mačak lokacija"
-              src="https://maps.google.com/maps?q=44.1578,17.7869&t=k&z=18&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Fitness+centar+Plavi+ma%C4%8Dak,+Vitez,+Bosnia+and+Herzegovina&t=k&z=18&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -340,7 +346,7 @@ const Reviews = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Što kažu naši <span className="text-gradient">članovi</span>
           </h2>
@@ -386,7 +392,7 @@ const Contact = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
             Pratite <span className="text-gradient">nas</span>
           </h2>
           <div className="section-line mx-auto mb-6" />

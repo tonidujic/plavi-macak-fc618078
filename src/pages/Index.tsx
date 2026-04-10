@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
@@ -38,7 +38,7 @@ const Navbar = () => {
             />
           </a>
           <div>
-            <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
+            <span className={`text-lg font-bold tracking-tight font-heading uppercase transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
             </span>
             <span className={`hidden sm:inline text-sm ml-2 transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-[hsl(0_0%_100%/0.7)]"}`}>
@@ -46,7 +46,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
+        <div className="hidden md:flex items-center gap-6 text-sm font-bold font-heading tracking-wider uppercase">
           {[
             { href: "#usluge", label: "Usluge" },
             { href: "#recenzije", label: "Recenzije" },
@@ -107,8 +107,8 @@ const Hero = () => {
             height={110}
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)]">
-            Plavi <span className="text-gradient">Mačak</span>
+           <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)] uppercase">
+             Plavi <span className="text-gradient">Mačak</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-2 text-[hsl(0_0%_100%/0.8)] tracking-widest uppercase">
             Fitness Centar
@@ -119,9 +119,9 @@ const Hero = () => {
           <div className="flex flex-row gap-3 justify-center px-4">
             <a
               href="#o-nama"
-              className="hero-btn inline-block bg-gradient-primary text-primary-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 text-sm sm:text-base"
-            >
-              Saznaj više
+              className="hero-btn inline-block bg-gradient-primary text-[hsl(0_0%_100%)] font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 text-sm sm:text-base"
+             >
+               Saznaj više
             </a>
             <a
               href="#kontakt"
@@ -147,7 +147,7 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-2xl text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+             <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
@@ -182,7 +182,7 @@ const About = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-6">
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="section-line mx-auto mb-8" />
@@ -220,7 +220,7 @@ const Services = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             Naše <span className="text-gradient">usluge</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
@@ -259,7 +259,7 @@ const Schedule = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
@@ -290,7 +290,7 @@ const Location = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
@@ -346,7 +346,7 @@ const Reviews = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Što kažu naši <span className="text-gradient">članovi</span>
           </h2>
@@ -392,7 +392,7 @@ const Contact = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
             Pratite <span className="text-gradient">nas</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
@@ -424,6 +424,83 @@ const Contact = () => (
     </section>
   </>
 );
+
+const faqItems = [
+  {
+    q: "Koje su cijene članarina?",
+    a: "Nudimo razne pakete članarina prilagođene vašim potrebama. Kontaktirajte nas za detaljne informacije o cijenama i trenutnim akcijama.",
+  },
+  {
+    q: "Da li nudite personalni trening?",
+    a: "Da! Naši certificirani treneri nude individualne programe treninga prilagođene vašim ciljevima i razini kondicije.",
+  },
+  {
+    q: "Kakva je oprema u teretani?",
+    a: "Teretana je opremljena vrhunskim spravama i slobodnim tegovima poznatih proizvođača, pogodnim za sve razine treninga.",
+  },
+  {
+    q: "Trebam li zakazati termin za grupne treninge?",
+    a: "Za grupne treninge preporučujemo da se javite unaprijed kako bismo vam osigurali mjesto. Raspored treninga možete pratiti na našim društvenim mrežama.",
+  },
+  {
+    q: "Da li imate parking?",
+    a: "Da, unutar kompleksa Etno selo Čardaci osiguran je besplatan parking za sve naše članove.",
+  },
+];
+
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <>
+      <SectionDivider variant="wave" flip className="bg-card" />
+      <section id="faq" className="py-24 px-4 bg-[hsl(210_25%_95%)] relative overflow-hidden">
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4 text-[hsl(220_30%_20%)]">
+              Često postavljana pitanja
+            </h2>
+            <p className="text-[hsl(220_10%_45%)] text-center mb-12 max-w-xl mx-auto">
+              Odgovori na najčešća pitanja o našem fitness centru
+            </p>
+          </AnimatedSection>
+          <div className="flex flex-col gap-3">
+            {faqItems.map((item, i) => (
+              <AnimatedSection key={i} delay={i * 80}>
+                <div
+                  className="bg-[hsl(0_0%_100%)] rounded-xl shadow-sm border border-[hsl(220_15%_90%)] overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
+                  >
+                    <span className="font-semibold text-[hsl(220_30%_20%)] font-display text-base">
+                      {item.q}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[hsl(220_10%_45%)] shrink-0 transition-transform duration-300 ${
+                        openIndex === i ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <p className="px-6 pb-5 text-[hsl(220_10%_45%)] leading-relaxed text-sm">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
 const Footer = () => (
   <footer className="bg-card border-t border-border/50 pt-16 pb-8 px-4 relative overflow-hidden">
@@ -475,6 +552,14 @@ const Footer = () => (
 
         {/* Info */}
         <div className="text-center md:text-left">
+          <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Kontakt</h4>
+          <a
+            href="tel:+38763690014"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 justify-center md:justify-start mb-4"
+          >
+            <Phone className="w-4 h-4" />
+            +387 63 690 014
+          </a>
           <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Radno vrijeme</h4>
           <div className="text-sm text-muted-foreground space-y-1 mb-6">
             <p>Pon – Pet: 07:00 – 22:00</p>
@@ -524,6 +609,7 @@ const Index = () => (
     <Schedule />
     <Location />
     <Reviews />
+    <FAQ />
     <Contact />
     <Footer />
   </>

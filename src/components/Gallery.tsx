@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Search } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -20,9 +21,10 @@ const Gallery = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section id="galerija" className="py-24 px-4 bg-background">
+    <section id="galerija" className="py-24 px-4 bg-background relative overflow-hidden">
+      <div className="noise-overlay" />
       <AnimatedSection>
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Naš <span className="text-gradient">prostor</span>
           </h2>
@@ -36,20 +38,28 @@ const Gallery = () => {
               <AnimatedSection
                 key={i}
                 delay={i * 100}
+                variant={i % 2 === 0 ? "left" : "right"}
                 className={i === 0 ? "col-span-2 md:col-span-2 row-span-2" : ""}
               >
                 <button
                   onClick={() => setSelected(i)}
-                  className="w-full h-full overflow-hidden rounded-xl border border-border shadow-warm group focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full h-full overflow-hidden rounded-xl gradient-border shadow-warm group focus:outline-none focus:ring-2 focus:ring-primary relative"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className={`w-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
                       i === 0 ? "h-full min-h-[280px] md:min-h-[420px]" : "h-48 md:h-56"
                     }`}
                   />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-end pb-5">
+                    <Search className="w-6 h-6 text-primary mb-2 drop-shadow-lg" />
+                    <span className="text-sm font-medium text-foreground drop-shadow-lg px-3 text-center">
+                      {img.alt}
+                    </span>
+                  </div>
                 </button>
               </AnimatedSection>
             ))}
@@ -70,7 +80,7 @@ const Gallery = () => {
             />
             <button
               onClick={() => setSelected(null)}
-              className="absolute top-3 right-3 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-black/80 transition-colors"
+              className="absolute top-3 right-3 bg-black/60 text-foreground w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-black/80 transition-colors"
             >
               ✕
             </button>
@@ -80,7 +90,7 @@ const Gallery = () => {
                   key={i}
                   onClick={() => setSelected(i)}
                   className={`w-3 h-3 rounded-full transition-all ${
-                    i === selected ? "bg-primary scale-125" : "bg-white/40 hover:bg-white/70"
+                    i === selected ? "bg-primary scale-125" : "bg-muted-foreground/40 hover:bg-muted-foreground/70"
                   }`}
                 />
               ))}

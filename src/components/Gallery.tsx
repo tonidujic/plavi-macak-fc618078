@@ -25,8 +25,8 @@ const Gallery = () => {
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
-            Naš <span className="text-gradient">prostor</span>
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+             Naš <span className="text-gradient">prostor</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
@@ -54,7 +54,7 @@ const Gallery = () => {
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
-                    <span className="text-sm font-bold uppercase tracking-wider text-primary drop-shadow-lg">
+                    <span className="text-sm font-extrabold uppercase tracking-wider text-primary drop-shadow-lg font-display">
                       {img.alt}
                     </span>
                   </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-bold font-heading tracking-wider uppercase">
+        <div className="hidden md:flex items-center gap-6 text-sm font-extrabold font-heading tracking-wider uppercase">
           {[
             { href: "#usluge", label: "Usluge" },
             { href: "#recenzije", label: "Recenzije" },
@@ -454,13 +454,15 @@ const FAQ = () => {
   return (
     <>
       <SectionDivider variant="wave" flip className="bg-card" />
-      <section id="faq" className="py-24 px-4 bg-[hsl(210_25%_95%)] relative overflow-hidden">
+      <section id="faq" className="py-24 px-4 bg-card relative overflow-hidden">
+        <div className="noise-overlay" />
         <div className="container mx-auto max-w-3xl relative z-10">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4 text-[hsl(220_30%_20%)]">
-              Često postavljana pitanja
+            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+              Često postavljana <span className="text-gradient">pitanja</span>
             </h2>
-            <p className="text-[hsl(220_10%_45%)] text-center mb-12 max-w-xl mx-auto">
+            <div className="section-line mx-auto mb-6" />
+            <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
               Odgovori na najčešća pitanja o našem fitness centru
             </p>
           </AnimatedSection>
@@ -468,17 +470,17 @@ const FAQ = () => {
             {faqItems.map((item, i) => (
               <AnimatedSection key={i} delay={i * 80}>
                 <div
-                  className="bg-[hsl(0_0%_100%)] rounded-xl shadow-sm border border-[hsl(220_15%_90%)] overflow-hidden transition-all duration-300"
+                  className="glass rounded-xl gradient-border overflow-hidden transition-all duration-300 hover:shadow-glow"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
                     className="w-full flex items-center justify-between px-6 py-5 text-left group"
                   >
-                    <span className="font-semibold text-[hsl(220_30%_20%)] font-display text-base">
+                    <span className="font-semibold text-foreground font-display text-base">
                       {item.q}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[hsl(220_10%_45%)] shrink-0 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${
                         openIndex === i ? "rotate-180" : ""
                       }`}
                     />
@@ -488,7 +490,7 @@ const FAQ = () => {
                       openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="px-6 pb-5 text-[hsl(220_10%_45%)] leading-relaxed text-sm">
+                    <p className="px-6 pb-5 text-muted-foreground leading-relaxed text-sm">
                       {item.a}
                     </p>
                   </div>

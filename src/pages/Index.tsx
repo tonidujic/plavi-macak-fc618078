@@ -38,7 +38,7 @@ const Navbar = () => {
             />
           </a>
           <div>
-            <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
+            <span className={`text-lg font-bold tracking-tight font-heading uppercase transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
             </span>
             <span className={`hidden sm:inline text-sm ml-2 transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-[hsl(0_0%_100%/0.7)]"}`}>
@@ -46,7 +46,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
+        <div className="hidden md:flex items-center gap-6 text-sm font-bold font-heading tracking-wider uppercase">
           {[
             { href: "#usluge", label: "Usluge" },
             { href: "#recenzije", label: "Recenzije" },
@@ -107,8 +107,8 @@ const Hero = () => {
             height={110}
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)]">
-            Plavi <span className="text-gradient">Mačak</span>
+           <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)] uppercase">
+             Plavi <span className="text-gradient">Mačak</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-2 text-[hsl(0_0%_100%/0.8)] tracking-widest uppercase">
             Fitness Centar
@@ -119,9 +119,9 @@ const Hero = () => {
           <div className="flex flex-row gap-3 justify-center px-4">
             <a
               href="#o-nama"
-              className="hero-btn inline-block bg-gradient-primary text-primary-foreground font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 text-sm sm:text-base"
-            >
-              Saznaj više
+              className="hero-btn inline-block bg-gradient-primary text-[hsl(0_0%_100%)] font-semibold px-5 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-glow hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 text-sm sm:text-base"
+             >
+               Saznaj više
             </a>
             <a
               href="#kontakt"

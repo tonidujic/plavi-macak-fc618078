@@ -71,7 +71,25 @@ const Navbar = () => {
 
 const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.muted = true;
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
   useEffect(() => {
     const onScroll = () => setOffsetY(window.scrollY);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -172,8 +190,10 @@ const Hero = () => {
               </div>
               {/* Video */}
               <video
+                ref={videoRef}
                 src="/grupni-treninzi.mp4"
                 controls
+                muted
                 playsInline
                 preload="metadata"
                 className="w-full aspect-[4/5] object-cover"

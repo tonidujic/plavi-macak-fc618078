@@ -327,8 +327,27 @@ const reviews = [
     text: "Odlično radno vrijeme i pristupačne cijene. Osoblje je ljubazno i uvijek spremno pomoći. Top teretana!",
     rating: 4,
   },
+  {
+    name: "Ivana S.",
+    text: "Health Bar je odličan dodatak! Nakon treninga uvijek uživam u zdravom smoothiju. Sve na jednom mjestu.",
+    rating: 5,
+  },
+  {
+    name: "Dino T.",
+    text: "Tri sale za vježbanje sa preko 50 sprava — uvijek ima mjesta i nikad ne moram čekati. Vrhunski!",
+    rating: 5,
+  },
+  {
+    name: "Sara P.",
+    text: "Lokacija u Etno selu Čardaci je prekrasna. Trening u ovakvom okruženju je poseban doživljaj.",
+    rating: 5,
+  },
+  {
+    name: "Adnan R.",
+    text: "Od početnika do naprednog sportaša — ovdje svatko pronađe sve što mu treba. Preporučujem 100%!",
+    rating: 5,
+  },
 ];
-
 const Reviews = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -370,7 +389,7 @@ const Reviews = () => {
               {reviews.map((r) => (
                 <div
                   key={r.name}
-                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-white rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group overflow-visible"
+                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(var(--muted))] rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group overflow-visible"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, si) => (
@@ -492,7 +511,7 @@ const FAQ = () => {
             {faqItems.map((item, i) => (
               <AnimatedSection key={i} delay={i * 80}>
                 <div
-                  className="bg-white rounded-xl border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-glow"
+                  className="bg-gradient-to-br from-[hsl(0_0%_100%)] to-[hsl(var(--muted))] rounded-xl border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-glow"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -626,13 +645,13 @@ const Index = () => (
     <ScrollProgress />
     <Navbar />
     <Hero />
+    <Services />
     <About />
     <CounterSection />
-    <Gallery />
-    <Services />
     <Schedule />
-    <Location />
+    <Gallery />
     <Reviews />
+    <Location />
     <FAQ />
     <Contact />
     <Footer />

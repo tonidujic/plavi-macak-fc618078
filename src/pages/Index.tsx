@@ -37,14 +37,6 @@ const Navbar = () => {
               className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110 relative z-10"
             />
           </a>
-          <div>
-            <span className={`text-lg font-bold tracking-tight font-heading uppercase transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
-              Plavi Mačak
-            </span>
-            <span className={`hidden sm:inline text-sm ml-2 transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-[hsl(0_0%_100%/0.7)]"}`}>
-              Fitness Centar
-            </span>
-          </div>
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm font-extrabold font-heading tracking-wider uppercase">
           {[
@@ -192,13 +184,10 @@ const About = () => (
               Vitezu, unutar turističkog kompleksa{" "}
               <strong className="text-foreground">Etno selo Čardaci</strong> i obuhvaća prostor od
               900m² unutar kojega se nalaze tri sale za vježbanje sa više od 50 različitih sprava te
-              mnoštvom popratnih rekvizita za vježbanje i Health Bar.
-            </p>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto my-6 rounded-full" />
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              Otvoren 2019. godine — nudimo vrhunski opremljenu teretanu za sve razine spremnosti — od
-              početnika do iskusnih sportaša. Naša misija je pomoći vam da postignete svoje fitness
-              ciljove u motivirajućem i profesionalnom okruženju.
+              mnoštvom popratnih rekvizita za vježbanje i Health Bar. Otvoren 2019. godine — nudimo
+              vrhunski opremljenu teretanu za sve razine spremnosti — od početnika do iskusnih sportaša.
+              Naša misija je pomoći vam da postignete svoje fitness ciljove u motivirajućem i
+              profesionalnom okruženju.
             </p>
           </div>
         </div>
@@ -381,7 +370,7 @@ const Reviews = () => {
               {reviews.map((r) => (
                 <div
                   key={r.name}
-                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-card rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group"
+                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-muted/50 rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group overflow-visible"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, si) => (
@@ -503,7 +492,7 @@ const FAQ = () => {
             {faqItems.map((item, i) => (
               <AnimatedSection key={i} delay={i * 80}>
                 <div
-                  className="glass rounded-xl gradient-border overflow-hidden transition-all duration-300 hover:shadow-glow"
+                  className="bg-muted/50 rounded-xl border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-glow"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}

@@ -181,6 +181,7 @@ const Hero = () => {
                 title="Grupni treninzi - Plavi Mačak Fitness"
               />
             </div>
+          </div>
         </AnimatedSection>
       </section>
     </>

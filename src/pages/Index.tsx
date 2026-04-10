@@ -425,6 +425,83 @@ const Contact = () => (
   </>
 );
 
+const faqItems = [
+  {
+    q: "Koje su cijene članarina?",
+    a: "Nudimo razne pakete članarina prilagođene vašim potrebama. Kontaktirajte nas za detaljne informacije o cijenama i trenutnim akcijama.",
+  },
+  {
+    q: "Da li nudite personalni trening?",
+    a: "Da! Naši certificirani treneri nude individualne programe treninga prilagođene vašim ciljevima i razini kondicije.",
+  },
+  {
+    q: "Kakva je oprema u teretani?",
+    a: "Teretana je opremljena vrhunskim spravama i slobodnim tegovima poznatih proizvođača, pogodnim za sve razine treninga.",
+  },
+  {
+    q: "Trebam li zakazati termin za grupne treninge?",
+    a: "Za grupne treninge preporučujemo da se javite unaprijed kako bismo vam osigurali mjesto. Raspored treninga možete pratiti na našim društvenim mrežama.",
+  },
+  {
+    q: "Da li imate parking?",
+    a: "Da, unutar kompleksa Etno selo Čardaci osiguran je besplatan parking za sve naše članove.",
+  },
+];
+
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <>
+      <SectionDivider variant="wave" flip className="bg-card" />
+      <section id="faq" className="py-24 px-4 bg-[hsl(210_25%_95%)] relative overflow-hidden">
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4 text-[hsl(220_30%_20%)]">
+              Često postavljana pitanja
+            </h2>
+            <p className="text-[hsl(220_10%_45%)] text-center mb-12 max-w-xl mx-auto">
+              Odgovori na najčešća pitanja o našem fitness centru
+            </p>
+          </AnimatedSection>
+          <div className="flex flex-col gap-3">
+            {faqItems.map((item, i) => (
+              <AnimatedSection key={i} delay={i * 80}>
+                <div
+                  className="bg-[hsl(0_0%_100%)] rounded-xl shadow-sm border border-[hsl(220_15%_90%)] overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
+                  >
+                    <span className="font-semibold text-[hsl(220_30%_20%)] font-display text-base">
+                      {item.q}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[hsl(220_10%_45%)] shrink-0 transition-transform duration-300 ${
+                        openIndex === i ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <p className="px-6 pb-5 text-[hsl(220_10%_45%)] leading-relaxed text-sm">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
 const Footer = () => (
   <footer className="bg-card border-t border-border/50 pt-16 pb-8 px-4 relative overflow-hidden">
     <div className="noise-overlay" />
@@ -475,6 +552,14 @@ const Footer = () => (
 
         {/* Info */}
         <div className="text-center md:text-left">
+          <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Kontakt</h4>
+          <a
+            href="tel:+38763690014"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200 justify-center md:justify-start mb-4"
+          >
+            <Phone className="w-4 h-4" />
+            +387 63 690 014
+          </a>
           <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Radno vrijeme</h4>
           <div className="text-sm text-muted-foreground space-y-1 mb-6">
             <p>Pon – Pet: 07:00 – 22:00</p>
@@ -524,6 +609,7 @@ const Index = () => (
     <Schedule />
     <Location />
     <Reviews />
+    <FAQ />
     <Contact />
     <Footer />
   </>

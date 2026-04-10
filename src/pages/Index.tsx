@@ -220,12 +220,12 @@ const Services = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <AnimatedSection key={s.title} delay={i * 120} variant={i < 2 ? "left" : "right"}>
-              <div className="glass rounded-xl p-6 shadow-warm gradient-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow group h-full cursor-default">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-xl p-6 shadow-warm border border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow group h-full cursor-default">
                 <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center mb-4 icon-glow group-hover:scale-110 transition-all duration-500">
                   <s.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">{s.title}</h3>
+                <p className="text-sm text-gray-600">{s.desc}</p>
               </div>
             </AnimatedSection>
           ))}

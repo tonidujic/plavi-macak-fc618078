@@ -70,7 +70,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 14px;
+    width: 25px;
   }
   ::-webkit-scrollbar-track {
     background: hsl(150 15% 14%);

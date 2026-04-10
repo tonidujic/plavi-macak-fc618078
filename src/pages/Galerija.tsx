@@ -1,0 +1,141 @@
+import { useState } from "react";
+import { Search, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+import AnimatedSection from "@/components/AnimatedSection";
+import ScrollProgress from "@/components/ScrollProgress";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
+
+const images = [
+  { src: gallery1, alt: "Kardio zona s trakama za trčanje" },
+  { src: gallery2, alt: "Glavni prostor teretane sa spravama" },
+  { src: gallery3, alt: "Prostor za funkcionalni trening" },
+  { src: gallery4, alt: "Zona za vježbanje i street workout" },
+  { src: gallery5, alt: "Recepcija i fitness shop" },
+  { src: gallery6, alt: "Tegovi i bumper ploče" },
+  // Repeat with different descriptions for more content on full page
+  { src: gallery1, alt: "Moderni kardio uređaji" },
+  { src: gallery3, alt: "Funkcionalna zona - pogled" },
+  { src: gallery4, alt: "Street workout park" },
+  { src: gallery2, alt: "Panorama teretane" },
+  { src: gallery5, alt: "Ulaz i recepcija" },
+  { src: gallery6, alt: "Profesionalna oprema" },
+];
+
+const GalerijaPage = () => {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  return (
+    <>
+      <ScrollProgress />
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <div className="pt-8 pb-16 px-4 bg-card relative overflow-hidden">
+          <div className="noise-overlay" />
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-200 mb-8 font-heading uppercase text-sm tracking-wider"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Nazad na početnu
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-black font-heading uppercase tracking-tight mb-4">
+              <span className="text-gradient">Galerija</span>
+            </h1>
+            <div className="section-line mb-6" />
+            <p className="text-muted-foreground text-lg max-w-xl">
+              Pogledajte našu kompletnu galeriju i upoznajte prostor u kojem ćete trenirati
+            </p>
+          </div>
+        </div>
+
+        {/* Gallery grid */}
+        <section className="py-16 px-4 bg-background relative overflow-hidden">
+          <div className="noise-overlay" />
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+              {images.map((img, i) => (
+                <AnimatedSection
+                  key={i}
+                  delay={i * 80}
+                  variant={i % 2 === 0 ? "left" : "right"}
+                  className={i === 0 || i === 5 ? "col-span-2 row-span-2" : ""}
+                >
+                  <button
+                    onClick={() => setSelected(i)}
+                    className="w-full h-full overflow-hidden rounded-xl gradient-border shadow-warm group focus:outline-none focus:ring-2 focus:ring-primary relative"
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                        i === 0 || i === 5 ? "h-full min-h-[280px] md:min-h-[420px]" : "h-48 md:h-64"
+                      }`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-end pb-5">
+                      <Search className="w-6 h-6 text-primary mb-2 drop-shadow-lg" />
+                      <span className="text-sm font-medium text-foreground drop-shadow-lg px-3 text-center">
+                        {img.alt}
+                      </span>
+                    </div>
+                  </button>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Back CTA */}
+        <div className="py-12 text-center">
+          <Link
+            to="/"
+            className="inline-block bg-gradient-primary text-primary-foreground font-semibold px-7 py-3 rounded-full shadow-glow hover:scale-105 transition-all duration-300 font-heading uppercase tracking-wider text-sm"
+          >
+            Nazad na početnu
+          </Link>
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {selected !== null && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-[fade-in-up_0.3s_ease-out]"
+          onClick={() => setSelected(null)}
+        >
+          <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={images[selected].src}
+              alt={images[selected].alt}
+              className="w-full rounded-xl shadow-2xl"
+            />
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute top-3 right-3 bg-black/60 text-foreground w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-black/80 transition-colors"
+            >
+              ✕
+            </button>
+            <div className="flex justify-center gap-2 mt-4 flex-wrap">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelected(i)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    i === selected ? "bg-primary scale-125" : "bg-muted-foreground/40 hover:bg-muted-foreground/70"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default GalerijaPage;

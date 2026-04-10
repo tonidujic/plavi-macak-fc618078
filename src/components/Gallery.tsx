@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -25,10 +26,10 @@ const Gallery = () => {
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
             Naš <span className="text-gradient">prostor</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
+          <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
             Pogledajte kako izgleda naša teretana
           </p>
@@ -53,7 +54,6 @@ const Gallery = () => {
                       i === 0 ? "h-full min-h-[280px] md:min-h-[420px]" : "h-48 md:h-56"
                     }`}
                   />
-                  {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-end pb-5">
                     <Search className="w-6 h-6 text-primary mb-2 drop-shadow-lg" />
                     <span className="text-sm font-medium text-foreground drop-shadow-lg px-3 text-center">
@@ -63,6 +63,16 @@ const Gallery = () => {
                 </button>
               </AnimatedSection>
             ))}
+          </div>
+
+          {/* "Više" button */}
+          <div className="text-center mt-12">
+            <Link
+              to="/galerija"
+              className="inline-block bg-gradient-primary text-primary-foreground font-semibold px-7 py-3 rounded-full shadow-glow hover:scale-105 transition-all duration-300 font-heading uppercase tracking-wider text-sm"
+            >
+              Pogledaj više
+            </Link>
           </div>
         </div>
       </AnimatedSection>

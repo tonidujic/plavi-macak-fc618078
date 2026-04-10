@@ -153,13 +153,11 @@ const Hero = () => {
               <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #efefef' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                      <span className="text-[11px] font-bold" style={{ color: '#262626' }}>PM</span>
-                    </div>
+                    <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-white" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold leading-tight" style={{ color: '#262626' }}>plavi_macak_fitness</p>
-                    <p className="text-xs" style={{ color: '#8e8e8e' }}>1414 pratitelja</p>
+                    <p className="text-xs" style={{ color: '#00a676' }}>1414 pratitelja</p>
                   </div>
                 </div>
                 <a
@@ -178,7 +176,7 @@ const Hero = () => {
                 controls
                 playsInline
                 preload="metadata"
-                className="w-full aspect-[9/16] object-cover"
+                className="w-full aspect-[4/5] object-cover"
                 style={{ background: '#000' }}
                 title="Grupni treninzi - Plavi Mačak Fitness"
               />

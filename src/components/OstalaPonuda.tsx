@@ -50,7 +50,7 @@ const OstalaPonuda = () => (
                   <span className="text-white/70 text-xs md:text-sm font-heading uppercase tracking-[0.2em] mb-2">
                     {item.subtitle}
                   </span>
-                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold italic leading-tight whitespace-pre-line" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                  <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-bold italic leading-tight whitespace-pre-line" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
                     {item.title}
                   </h3>
                   <span className="mt-4 text-white/70 text-xs md:text-sm uppercase tracking-[0.15em] font-heading group-hover:text-white transition-colors duration-300">

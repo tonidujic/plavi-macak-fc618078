@@ -148,19 +148,20 @@ const Hero = () => {
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
             </p>
-            <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border bg-card">
-              {/* Instagram-style header */}
-              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/30">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center">
-                  <div className="w-7 h-7 rounded-full bg-card flex items-center justify-center">
-                    <span className="text-xs font-bold text-foreground">PM</span>
+            <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border" style={{ background: '#fff' }}>
+              {/* Instagram header */}
+              <div className="flex items-center gap-3 px-3 py-2.5" style={{ borderBottom: '1px solid #efefef' }}>
+                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                    <span className="text-[10px] font-bold" style={{ color: '#262626' }}>PM</span>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-foreground leading-tight">plavi_macak_fitness</p>
-                  <p className="text-xs text-muted-foreground">Čardaci, BiH</p>
+                <div className="flex-1 min-w-0">
+                  <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:underline" style={{ color: '#262626' }}>plavi_macak_fitness</a>
                 </div>
-                <svg className="w-5 h-5 text-foreground" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+                <a href="https://www.instagram.com/reel/DTAUfj1CrW_/" target="_blank" rel="noopener noreferrer">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0-2a5 5 0 110 10 5 5 0 010-10z" fill="#262626"/><circle cx="18.5" cy="5.5" r="1.5" fill="#262626"/></svg>
+                </a>
               </div>
               {/* Video */}
               <video
@@ -168,9 +169,21 @@ const Hero = () => {
                 controls
                 playsInline
                 preload="metadata"
-                className="w-full aspect-[9/16] object-cover bg-black"
+                className="w-full aspect-[9/16] object-cover"
+                style={{ background: '#000' }}
                 title="Grupni treninzi - Plavi Mačak Fitness"
               />
+              {/* Instagram footer */}
+              <div className="px-3 py-2.5" style={{ borderTop: '1px solid #efefef' }}>
+                <div className="flex items-center gap-4 mb-2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" strokeWidth="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </div>
+                <a href="https://www.instagram.com/reel/DTAUfj1CrW_/" target="_blank" rel="noopener noreferrer" className="text-xs hover:underline" style={{ color: '#00376b' }}>
+                  Pogledaj na Instagramu
+                </a>
+              </div>
             </div>
           </div>
         </AnimatedSection>

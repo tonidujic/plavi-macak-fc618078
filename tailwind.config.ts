@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
         heading: ['Space Grotesk', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

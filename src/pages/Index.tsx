@@ -147,7 +147,7 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-2xl text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+             <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
@@ -182,7 +182,7 @@ const About = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-6">
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="section-line mx-auto mb-8" />
@@ -220,7 +220,7 @@ const Services = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             Naše <span className="text-gradient">usluge</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
@@ -259,7 +259,7 @@ const Schedule = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
@@ -290,7 +290,7 @@ const Location = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
@@ -346,7 +346,7 @@ const Reviews = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Što kažu naši <span className="text-gradient">članovi</span>
           </h2>
@@ -392,7 +392,7 @@ const Contact = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
             Pratite <span className="text-gradient">nas</span>
           </h2>
           <div className="section-line mx-auto mb-6" />

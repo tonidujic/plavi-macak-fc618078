@@ -148,53 +148,18 @@ const Hero = () => {
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
             </p>
-            <div className="mx-auto max-w-md overflow-hidden shadow-warm" style={{ background: '#fff', borderRadius: '3px', border: '1px solid #dbdbdb' }}>
-              {/* Instagram header */}
-              <div className="flex items-center px-4 py-3" style={{ borderBottom: '1px solid #efefef' }}>
-                <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 flex-1 min-w-0">
-                  <div className="w-10 h-10 rounded-full flex-shrink-0 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                      <span className="text-[11px] font-bold" style={{ color: '#262626' }}>PM</span>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold leading-tight" style={{ color: '#262626' }}>plavi_macak_fitness</p>
-                  </div>
-                </a>
-                {/* Instagram logo */}
-                <a href="https://www.instagram.com/reel/DTAUfj1CrW_/" target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#262626">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                  </svg>
-                </a>
-              </div>
-              {/* Video */}
-              <video
-                src="/grupni-treninzi.mp4"
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full aspect-[9/16] object-cover"
-                style={{ background: '#000' }}
+            <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border">
+              <iframe
+                src="https://www.instagram.com/reel/DTAUfj1CrW_/embed/"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency
+                allow="encrypted-media"
                 title="Grupni treninzi - Plavi Mačak Fitness"
+                loading="lazy"
               />
-              {/* Instagram footer */}
-              <div className="px-4 py-3" style={{ borderTop: '1px solid #efefef' }}>
-                <div className="flex items-center gap-4 mb-3">
-                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M34.6 6.1c5.7 0 10.4 5 10.4 11.2 0 12.5-21 23.8-21 23.8S3 29.8 3 17.3C3 11.1 7.7 6.1 13.4 6.1c3.5 0 6.6 1.7 8.6 4.4 2-2.7 5.1-4.4 8.6-4.4z" stroke="#262626" strokeWidth="3"/></svg>
-                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8-2.8-1.4z" stroke="#262626" strokeWidth="3"/></svg>
-                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8H31.2c-.6 0-1.1.3-1.3.8-.3.5-.2 1.1.1 1.5L37.5 16 4.3 46.2c-.5.5-.5 1.2 0 1.7l1.8 1.8c.5.5 1.2.5 1.7 0L38 16.5l10.7 7.5c.4.3 1 .4 1.5.1.5-.3.8-.8.8-1.3V5.1c0-.5-.1-.9-.2-1.3z" fill="#262626"/></svg>
-                </div>
-                <div className="flex items-center justify-between">
-                  <a href="https://www.instagram.com/reel/DTAUfj1CrW_/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold" style={{ color: '#262626', textDecoration: 'none' }}>
-                    Pogledaj ovaj video na Instagramu
-                  </a>
-                </div>
-                <div className="mt-1 flex items-center gap-1">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#c7c7c7"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  <span className="text-xs" style={{ color: '#c7c7c7' }}>Instagram</span>
-                </div>
-              </div>
             </div>
           </div>
         </AnimatedSection>

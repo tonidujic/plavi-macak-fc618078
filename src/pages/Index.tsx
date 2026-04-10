@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
@@ -44,7 +44,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium font-heading tracking-wide">
+        <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
           {[
             { href: "#o-nama", label: "O nama" },
             { href: "#usluge", label: "Usluge" },
@@ -54,8 +54,8 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`hover:text-primary transition-colors duration-200 ${
-                scrolled ? "text-muted-foreground" : "text-[hsl(0_0%_100%/0.8)] hover:text-[hsl(0_0%_100%)]"
+              className={`nav-link-underline transition-colors duration-200 ${
+                scrolled ? "text-muted-foreground hover:text-foreground" : "text-[hsl(0_0%_100%/0.8)] hover:text-[hsl(0_0%_100%)]"
               }`}
             >
               {link.label}
@@ -104,7 +104,7 @@ const Hero = () => {
             height={110}
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)]">
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)] uppercase">
             PLAVI <span className="text-gradient">MAČAK</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-2 text-[hsl(0_0%_100%/0.8)] tracking-widest uppercase">
@@ -144,7 +144,7 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-2xl text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 uppercase">
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
@@ -179,7 +179,7 @@ const About = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 uppercase">
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-8 rounded-full" />
@@ -211,7 +211,7 @@ const Services = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
             Naše <span className="text-gradient">usluge</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
@@ -250,7 +250,7 @@ const Schedule = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
@@ -281,7 +281,7 @@ const Location = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
@@ -292,7 +292,7 @@ const Location = () => (
           <div className="rounded-xl overflow-hidden shadow-warm gradient-border">
             <iframe
               title="Plavi Mačak lokacija"
-              src="https://maps.google.com/maps?q=5Q7G%2BP6F,+Vitez,+Bosnia+%26+Herzegovina&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=44.1578,17.7869&t=k&z=18&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -307,6 +307,75 @@ const Location = () => (
   </>
 );
 
+const reviews = [
+  {
+    name: "Marko B.",
+    text: "Najbolja teretana u Vitezu! Oprema je vrhunska, a atmosfera odlična. Preporučujem svima koji traže kvalitetan trening.",
+    rating: 5,
+  },
+  {
+    name: "Ana K.",
+    text: "Grupni treninzi su fantastični! Treneri su profesionalni i uvijek motiviraju. Osjećam se kao dio obitelji.",
+    rating: 5,
+  },
+  {
+    name: "Emir H.",
+    text: "Konačno moderna teretana s pravom opremom. Čisto, prostrano i uvijek ugodna atmosfera za trening.",
+    rating: 5,
+  },
+  {
+    name: "Lejla M.",
+    text: "Odlično radno vrijeme i pristupačne cijene. Osoblje je ljubazno i uvijek spremno pomoći. Top teretana!",
+    rating: 4,
+  },
+];
+
+const Reviews = () => (
+  <>
+    <SectionDivider variant="wave" className="bg-background" />
+    <section id="recenzije" className="py-24 px-4 bg-card relative overflow-hidden">
+      <div className="noise-overlay" />
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <AnimatedSection>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
+            <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
+            Što kažu naši <span className="text-gradient">članovi</span>
+          </h2>
+          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
+          <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
+            Iskustva naših zadovoljnih članova govore sama za sebe
+          </p>
+        </AnimatedSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reviews.map((r, i) => (
+            <AnimatedSection key={r.name} delay={i * 150} variant={i % 2 === 0 ? "left" : "right"}>
+              <div className="glass rounded-xl p-6 shadow-warm gradient-border h-full flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group">
+                <div className="flex items-center gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, si) => (
+                    <Star
+                      key={si}
+                      className={`w-4 h-4 ${si < r.rating ? "text-primary fill-primary" : "text-muted-foreground/30"}`}
+                    />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-1 italic">
+                  "{r.text}"
+                </p>
+                <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+                  <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                    {r.name.charAt(0)}
+                  </div>
+                  <span className="font-semibold text-sm">{r.name}</span>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
+);
+
 const Contact = () => (
   <>
     <SectionDivider variant="dots" />
@@ -314,7 +383,7 @@ const Contact = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 uppercase">
             Pratite <span className="text-gradient">nas</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
@@ -364,7 +433,7 @@ const Footer = () => (
               loading="lazy"
             />
             <div>
-              <p className="font-bold text-lg">Plavi Mačak</p>
+              <p className="font-bold text-lg font-heading">Plavi Mačak</p>
               <p className="text-sm text-muted-foreground">Fitness Centar</p>
             </div>
           </div>
@@ -375,7 +444,7 @@ const Footer = () => (
 
         {/* Quick links */}
         <div className="text-center md:text-left">
-          <h4 className="font-semibold mb-4 text-primary">Brzi linkovi</h4>
+          <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Brzi linkovi</h4>
           <nav className="flex flex-col gap-2">
             {[
               { href: "#o-nama", label: "O nama" },
@@ -397,13 +466,13 @@ const Footer = () => (
 
         {/* Info */}
         <div className="text-center md:text-left">
-          <h4 className="font-semibold mb-4 text-primary">Radno vrijeme</h4>
+          <h4 className="font-semibold mb-4 text-primary font-heading uppercase text-sm tracking-wider">Radno vrijeme</h4>
           <div className="text-sm text-muted-foreground space-y-1 mb-6">
             <p>Pon – Pet: 07:00 – 22:00</p>
             <p>Subota: 09:00 – 21:00</p>
             <p>Nedjelja: 07:00 – 22:00</p>
           </div>
-          <h4 className="font-semibold mb-3 text-primary">Pratite nas</h4>
+          <h4 className="font-semibold mb-3 text-primary font-heading uppercase text-sm tracking-wider">Pratite nas</h4>
           <div className="flex gap-3 justify-center md:justify-start">
             <a
               href="https://www.instagram.com/plavi_macak_fitness/"
@@ -445,6 +514,7 @@ const Index = () => (
     <Services />
     <Schedule />
     <Location />
+    <Reviews />
     <Contact />
     <Footer />
   </>

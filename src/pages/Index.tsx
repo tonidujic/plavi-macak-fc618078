@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
@@ -186,18 +186,19 @@ const About = () => (
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="section-line mx-auto mb-8" />
-          <div className="glass rounded-2xl p-8 md:p-12 gradient-border shadow-warm">
+           <div className="glass rounded-2xl p-8 md:p-12 gradient-border shadow-warm">
             <p className="text-muted-foreground leading-relaxed text-lg">
               Fitness centar <strong className="text-foreground">Plavi Mačak</strong> smješten je u
               Vitezu, unutar turističkog kompleksa{" "}
-              <strong className="text-foreground">Etno selo Čardaci</strong> (Poslovni Centar 96 Zona
-              2, Vitez 72250). Otvoren 2026. godine, nudimo vrhunski opremljenu teretanu za sve razine
-              spremnosti — od početnika do iskusnih sportaša.
+              <strong className="text-foreground">Etno selo Čardaci</strong> i obuhvaća prostor od
+              900m² unutar kojega se nalaze tri sale za vježbanje sa više od 50 različitih sprava te
+              mnoštvom popratnih rekvizita za vježbanje i Health Bar.
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto my-6 rounded-full" />
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Naša misija je pomoći vam da postignete
-              svoje fitness ciljeve u motivirajućem i profesionalnom okruženju.
+              Otvoren 2019. godine — nudimo vrhunski opremljenu teretanu za sve razine spremnosti — od
+              početnika do iskusnih sportaša. Naša misija je pomoći vam da postignete svoje fitness
+              ciljove u motivirajućem i profesionalnom okruženju.
             </p>
           </div>
         </div>
@@ -231,7 +232,7 @@ const Services = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <AnimatedSection key={s.title} delay={i * 120} variant={i < 2 ? "left" : "right"}>
-              <div className="glass rounded-xl p-6 shadow-warm gradient-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow group h-full">
+              <div className="glass rounded-xl p-6 shadow-warm gradient-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow group h-full cursor-default">
                 <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center mb-4 icon-glow group-hover:scale-110 transition-all duration-500">
                   <s.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
@@ -339,51 +340,83 @@ const reviews = [
   },
 ];
 
-const Reviews = () => (
-  <>
-    <SectionDivider variant="wave" className="bg-background" />
-    <section id="recenzije" className="py-24 px-4 bg-card relative overflow-hidden">
-      <div className="noise-overlay" />
-      <div className="container mx-auto max-w-5xl relative z-10">
-        <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
-            <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
-            Što kažu naši <span className="text-gradient">članovi</span>
-          </h2>
-          <div className="section-line mx-auto mb-6" />
-          <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
-            Iskustva naših zadovoljnih članova govore sama za sebe
-          </p>
-        </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {reviews.map((r, i) => (
-            <AnimatedSection key={r.name} delay={i * 150} variant={i % 2 === 0 ? "left" : "right"}>
-              <div className="glass rounded-xl p-6 shadow-warm gradient-border h-full flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group">
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, si) => (
-                    <Star
-                      key={si}
-                      className={`w-4 h-4 ${si < r.rating ? "text-primary fill-primary" : "text-muted-foreground/30"}`}
-                    />
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 flex-1 italic">
-                  "{r.text}"
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border/30">
-                  <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
-                    {r.name.charAt(0)}
+const Reviews = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = 340;
+    scrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <SectionDivider variant="wave" className="bg-background" />
+      <section id="recenzije" className="py-24 px-4 bg-card relative overflow-hidden">
+        <div className="noise-overlay" />
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+              <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
+              Što kažu naši <span className="text-gradient">članovi</span>
+            </h2>
+            <div className="section-line mx-auto mb-6" />
+            <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
+              Iskustva naših zadovoljnih članova govore sama za sebe
+            </p>
+          </AnimatedSection>
+          <div className="relative">
+            <button
+              onClick={() => scroll("left")}
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-primary text-primary-foreground shadow-glow flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              aria-label="Prethodna recenzija"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <div
+              ref={scrollRef}
+              className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory px-2"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {reviews.map((r) => (
+                <div
+                  key={r.name}
+                  className="min-w-[300px] max-w-[340px] flex-shrink-0 snap-center bg-card rounded-xl p-6 shadow-warm border border-border/50 flex flex-col hover:-translate-y-1 hover:shadow-glow transition-all duration-500 group"
+                >
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, si) => (
+                      <Star
+                        key={si}
+                        className={`w-4 h-4 ${si < r.rating ? "text-primary fill-primary" : "text-muted-foreground/30"}`}
+                      />
+                    ))}
+                    <Quote className="w-5 h-5 text-primary/30 ml-auto" />
                   </div>
-                  <span className="font-semibold text-sm">{r.name}</span>
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1 italic text-sm">
+                    "{r.text}"
+                  </p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+                    <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                      {r.name.charAt(0)}
+                    </div>
+                    <span className="font-semibold text-sm">{r.name}</span>
+                  </div>
                 </div>
-              </div>
-            </AnimatedSection>
-          ))}
+              ))}
+            </div>
+            <button
+              onClick={() => scroll("right")}
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-primary text-primary-foreground shadow-glow flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              aria-label="Sljedeća recenzija"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 const Contact = () => (
   <>

@@ -148,17 +148,28 @@ const Hero = () => {
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
             </p>
-            <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border">
-              <iframe
-                src="https://www.instagram.com/reel/DTAUfj1CrW_/embed/"
-                width="100%"
-                height="600"
-                frameBorder="0"
-                scrolling="no"
-                allowTransparency
-                allow="encrypted-media"
+            <div className="mx-auto max-w-md rounded-xl overflow-hidden shadow-warm gradient-border bg-card">
+              {/* Instagram-style header */}
+              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/30">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full bg-card flex items-center justify-center">
+                    <span className="text-xs font-bold text-foreground">PM</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-foreground leading-tight">plavi_macak_fitness</p>
+                  <p className="text-xs text-muted-foreground">Čardaci, BiH</p>
+                </div>
+                <svg className="w-5 h-5 text-foreground" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+              </div>
+              {/* Video */}
+              <video
+                src="/grupni-treninzi.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full aspect-[9/16] object-cover bg-black"
                 title="Grupni treninzi - Plavi Mačak Fitness"
-                loading="lazy"
               />
             </div>
           </div>

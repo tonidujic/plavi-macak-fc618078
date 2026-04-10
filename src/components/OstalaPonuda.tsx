@@ -33,7 +33,7 @@ const OstalaPonuda = () => (
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {offerings.map((item, i) => (
             <AnimatedSection key={item.title} delay={i * 100} variant={i % 2 === 0 ? "left" : "right"}>
-              <div className="relative group cursor-pointer overflow-hidden rounded-xl aspect-[3/4] shadow-warm hover:shadow-glow transition-all duration-500">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block relative group overflow-hidden rounded-xl aspect-[3/4] shadow-warm hover:shadow-glow transition-all duration-500">
                 {/* Background image */}
                 <img
                   src={item.img}
@@ -57,7 +57,7 @@ const OstalaPonuda = () => (
                     Više informacija
                   </span>
                 </div>
-              </div>
+              </a>
             </AnimatedSection>
           ))}
         </div>

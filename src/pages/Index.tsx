@@ -381,14 +381,14 @@ const Reviews = () => {
                     ))}
                     <Quote className="w-5 h-5 text-primary/30 ml-auto" />
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1 italic text-sm">
+                  <p className="text-gray-700 leading-relaxed mb-6 flex-1 italic text-sm">
                     "{r.text}"
                   </p>
                   <div className="flex items-center gap-3 pt-4 border-t border-border/30">
                     <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
                       {r.name.charAt(0)}
                     </div>
-                    <span className="font-semibold text-sm">{r.name}</span>
+                    <span className="font-semibold text-sm text-gray-900">{r.name}</span>
                   </div>
                 </div>
               ))}
@@ -498,7 +498,7 @@ const FAQ = () => {
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
                     className="w-full flex items-center justify-between px-6 py-5 text-left group"
                   >
-                    <span className="font-semibold text-foreground font-display text-base">
+                    <span className="font-semibold text-gray-900 font-display text-base">
                       {item.q}
                     </span>
                     <ChevronDown
@@ -512,7 +512,7 @@ const FAQ = () => {
                       openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="px-6 pb-5 text-muted-foreground leading-relaxed text-sm">
+                    <p className="px-6 pb-5 text-gray-600 leading-relaxed text-sm">
                       {item.a}
                     </p>
                   </div>

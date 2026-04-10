@@ -28,13 +28,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="Plavi Mačak"
-            width={44}
-            height={44}
-            className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110"
-          />
+          <div className="logo-glow-wrap rounded-full transition-all duration-300">
+            <img
+              src={logo}
+              alt="Plavi Mačak"
+              width={44}
+              height={44}
+              className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110 relative z-10"
+            />
+          </div>
           <div>
             <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
@@ -47,8 +49,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
           {[
             { href: "#o-nama", label: "O nama" },
+            { href: "#galerija", label: "Galerija" },
             { href: "#usluge", label: "Usluge" },
-            { href: "#radno-vrijeme", label: "Radno vrijeme" },
+            { href: "#recenzije", label: "Recenzije" },
             { href: "#lokacija", label: "Lokacija" },
           ].map((link) => (
             <a
@@ -148,7 +151,7 @@ const Hero = () => {
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
-            <div className="w-16 h-1 bg-gradient-primary mx-auto mb-4 rounded-full" />
+            <div className="section-line mx-auto mb-4" />
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               Pridružite se našim dinamičnim grupnim treninzima i trenirajte u motivirajućoj atmosferi
             </p>
@@ -182,7 +185,7 @@ const About = () => (
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 uppercase">
             O <span className="text-gradient">nama</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-8 rounded-full" />
+          <div className="section-line mx-auto mb-8" />
           <p className="text-muted-foreground leading-relaxed text-lg">
             Fitness centar <strong className="text-foreground">Plavi Mačak</strong> smješten je u
             Vitezu, unutar turističkog kompleksa{" "}
@@ -214,7 +217,7 @@ const Services = () => (
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4 uppercase">
             Naše <span className="text-gradient">usluge</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
+          <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
             Sve što vam treba za postizanje fitness ciljeva na jednom mjestu
           </p>
@@ -254,7 +257,7 @@ const Schedule = () => (
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-12 rounded-full" />
+          <div className="section-line mx-auto mb-12" />
           <div className="glass rounded-xl shadow-warm gradient-border overflow-hidden">
             {schedule.map((s, i) => (
               <div
@@ -285,7 +288,7 @@ const Location = () => (
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-4 rounded-full" />
+          <div className="section-line mx-auto mb-4" />
           <p className="text-muted-foreground text-center mb-10">
             Poslovni Centar 96 Zona 2, Etno selo Čardaci, Vitez 72250
           </p>
@@ -341,7 +344,7 @@ const Reviews = () => (
             <Quote className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Što kažu naši <span className="text-gradient">članovi</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
+          <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
             Iskustva naših zadovoljnih članova govore sama za sebe
           </p>
@@ -386,7 +389,7 @@ const Contact = () => (
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 uppercase">
             Pratite <span className="text-gradient">nas</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
+          <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground mb-10">
             Pronađite nas na društvenim mrežama za najnovije vijesti i akcije
           </p>

@@ -28,13 +28,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="Plavi Mačak"
-            width={44}
-            height={44}
-            className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110"
-          />
+          <div className="logo-glow-wrap rounded-full transition-all duration-300">
+            <img
+              src={logo}
+              alt="Plavi Mačak"
+              width={44}
+              height={44}
+              className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110 relative z-10"
+            />
+          </div>
           <div>
             <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
@@ -47,8 +49,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6 text-sm font-semibold font-heading tracking-wider uppercase">
           {[
             { href: "#o-nama", label: "O nama" },
+            { href: "#galerija", label: "Galerija" },
             { href: "#usluge", label: "Usluge" },
-            { href: "#radno-vrijeme", label: "Radno vrijeme" },
+            { href: "#recenzije", label: "Recenzije" },
             { href: "#lokacija", label: "Lokacija" },
           ].map((link) => (
             <a

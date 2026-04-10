@@ -364,7 +364,7 @@ const Reviews = () => {
             </button>
             <div
               ref={scrollRef}
-              className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory px-2"
+              className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pb-8 pt-4 snap-x snap-mandatory px-2"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {reviews.map((r) => (

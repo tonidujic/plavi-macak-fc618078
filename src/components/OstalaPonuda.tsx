@@ -7,11 +7,11 @@ import spaImg from "@/assets/ponuda-spa.jpeg";
 import restoranImg from "@/assets/ponuda-restoran.jpg";
 
 const offerings = [
-  { subtitle: "ETNO SELO", title: "Bajkovit\nodmor", img: etnoImg },
-  { subtitle: "PIVNICA", title: "Kod Crnog\nMačka", img: pivnicaImg },
-  { subtitle: "RESTORAN", title: "Kod Mlina", img: restoranImg },
-  { subtitle: "VODENI PARK", title: "Ribica", img: vodeniparkImg },
-  { subtitle: "OAZA ZA ODMOR", title: "Spa &\nWellness", img: spaImg },
+  { subtitle: "ETNO SELO", title: "Bajkovit\nodmor", img: etnoImg, link: "https://www.cardaci.ba/offers/etno-selo/" },
+  { subtitle: "PIVNICA", title: "Kod Crnog\nMačka", img: pivnicaImg, link: "https://www.cardaci.ba/offers/kod-crnog-macka/" },
+  { subtitle: "RESTORAN", title: "Kod Mlina", img: restoranImg, link: "https://www.cardaci.ba/offers/kod-mlina/" },
+  { subtitle: "VODENI PARK", title: "Ribica", img: vodeniparkImg, link: "https://www.cardaci.ba/offers/ribica/" },
+  { subtitle: "OAZA ZA ODMOR", title: "Spa &\nWellness", img: spaImg, link: "https://www.cardaci.ba/offers/spa-wellness/" },
 ];
 
 const OstalaPonuda = () => (

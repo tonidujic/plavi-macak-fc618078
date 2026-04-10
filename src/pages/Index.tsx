@@ -190,8 +190,10 @@ const Hero = () => {
               </div>
               {/* Video */}
               <video
+                ref={videoRef}
                 src="/grupni-treninzi.mp4"
                 controls
+                muted
                 playsInline
                 preload="metadata"
                 className="w-full aspect-[4/5] object-cover"

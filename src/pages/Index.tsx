@@ -36,7 +36,7 @@ const Navbar = () => {
             className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110"
           />
           <div>
-            <span className={`text-lg font-bold tracking-tight transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
+            <span className={`text-lg font-bold tracking-tight font-heading transition-colors duration-300 ${scrolled ? "" : "text-[hsl(0_0%_100%)]"}`}>
               Plavi Mačak
             </span>
             <span className={`hidden sm:inline text-sm ml-2 transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-[hsl(0_0%_100%/0.7)]"}`}>
@@ -44,7 +44,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium font-heading tracking-wide">
           {[
             { href: "#o-nama", label: "O nama" },
             { href: "#usluge", label: "Usluge" },
@@ -104,7 +104,7 @@ const Hero = () => {
             height={110}
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 text-[hsl(0_0%_100%)]">
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)]">
             PLAVI <span className="text-gradient">MAČAK</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-2 text-[hsl(0_0%_100%/0.8)] tracking-widest uppercase">
@@ -144,7 +144,7 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-2xl text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
               Grupni <span className="text-gradient">treninzi</span>
             </h2>
@@ -179,7 +179,7 @@ const About = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
             O <span className="text-gradient">nama</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-8 rounded-full" />
@@ -211,7 +211,7 @@ const Services = () => (
       <div className="noise-overlay" />
       <div className="container mx-auto max-w-5xl relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             Naše <span className="text-gradient">usluge</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />
@@ -250,7 +250,7 @@ const Schedule = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             <Clock className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             Radno <span className="text-gradient">vrijeme</span>
           </h2>
@@ -281,7 +281,7 @@ const Location = () => (
       <div className="noise-overlay" />
       <AnimatedSection variant="scale">
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-4">
             <MapPin className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
             <span className="text-gradient">Lokacija</span>
           </h2>
@@ -314,7 +314,7 @@ const Contact = () => (
       <div className="noise-overlay" />
       <AnimatedSection>
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
             Pratite <span className="text-gradient">nas</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-primary mx-auto mb-6 rounded-full" />

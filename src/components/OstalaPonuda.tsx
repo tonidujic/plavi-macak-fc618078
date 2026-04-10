@@ -7,36 +7,11 @@ import spaImg from "@/assets/ponuda-spa.jpeg";
 import restoranImg from "@/assets/ponuda-restoran.jpg";
 
 const offerings = [
-  {
-    title: "Pivnica",
-    subtitle: "Craft Beer & Good Vibes",
-    desc: "Tradicionalna pivnica s bogatom ponudom domaćih i craft piva u autentičnom ambijentu.",
-    img: pivnicaImg,
-  },
-  {
-    title: "Etno Selo Čardaci",
-    subtitle: "Tradicija & Priroda",
-    desc: "Unikatni turistički kompleks koji spaja tradicionalnu bosansku arhitekturu s modernim sadržajima.",
-    img: etnoImg,
-  },
-  {
-    title: "Vodeni Park",
-    subtitle: "Aqua Fun & Relax",
-    desc: "Otvoreni bazeni s toboganima i atrakcijama za cijelu porodicu u prekrasnom prirodnom okruženju.",
-    img: vodeniparkImg,
-  },
-  {
-    title: "Oaza za Odmor",
-    subtitle: "Spa & Wellness",
-    desc: "Zatvoreni bazeni, saune i wellness zona za potpunu relaksaciju tijela i uma.",
-    img: spaImg,
-  },
-  {
-    title: "Restoran",
-    subtitle: "Fine Dining & Tradicija",
-    desc: "Restoran s pogledom na jezero i bogatom ponudom domaćih i internacionalnih specijaliteta.",
-    img: restoranImg,
-  },
+  { subtitle: "ETNO SELO", title: "Bajkovit\nodmor", img: etnoImg },
+  { subtitle: "PIVNICA", title: "Kod Crnog\nMačka", img: pivnicaImg },
+  { subtitle: "RESTORAN", title: "Kod Mlina", img: restoranImg },
+  { subtitle: "VODENI PARK", title: "Ribica", img: vodeniparkImg },
+  { subtitle: "OAZA ZA ODMOR", title: "Spa &\nWellness", img: spaImg },
 ];
 
 const OstalaPonuda = () => (
@@ -44,7 +19,7 @@ const OstalaPonuda = () => (
     <SectionDivider variant="wave" flip className="bg-card" />
     <section id="ostala-ponuda" className="py-24 px-4 bg-background relative overflow-hidden">
       <div className="noise-overlay" />
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             Ostala <span className="text-gradient">ponuda</span>
@@ -55,41 +30,32 @@ const OstalaPonuda = () => (
           </p>
         </AnimatedSection>
 
-        <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {offerings.map((item, i) => (
-            <AnimatedSection
-              key={item.title}
-              delay={i * 100}
-              variant={i % 2 === 0 ? "left" : "right"}
-            >
-              <div
-                className={`flex flex-col ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } rounded-2xl overflow-hidden shadow-warm gradient-border group hover:shadow-glow transition-all duration-500 bg-card`}
-              >
-                {/* Image */}
-                <div className="md:w-1/2 relative overflow-hidden aspect-[16/10] md:aspect-auto">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-black/20" />
-                </div>
-
+            <AnimatedSection key={item.title} delay={i * 100} variant={i % 2 === 0 ? "left" : "right"}>
+              <div className="relative group cursor-pointer overflow-hidden rounded-xl aspect-[3/4] shadow-warm hover:shadow-glow transition-all duration-500">
+                {/* Background image */}
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 group-hover:from-black/80 group-hover:via-black/40 transition-all duration-500" />
+                {/* Border effect */}
+                <div className="absolute inset-3 border border-white/20 rounded-lg pointer-events-none group-hover:border-white/40 transition-all duration-500" />
                 {/* Content */}
-                <div className="md:w-1/2 flex flex-col justify-center p-8 md:p-12 bg-gradient-to-br from-white to-[hsl(42_85%_85%)]">
-                  <span className="text-primary font-bold text-sm uppercase tracking-widest mb-2 font-heading">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                  <span className="text-white/70 text-xs md:text-sm font-heading uppercase tracking-[0.2em] mb-2">
                     {item.subtitle}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display text-gray-900 mb-4">
+                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold italic leading-tight whitespace-pre-line" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
                     {item.title}
                   </h3>
-                  <div className="w-12 h-1 bg-gradient-primary rounded-full mb-4" />
-                  <p className="text-gray-600 leading-relaxed text-base">
-                    {item.desc}
-                  </p>
+                  <span className="mt-4 text-white/70 text-xs md:text-sm uppercase tracking-[0.15em] font-heading group-hover:text-white transition-colors duration-300">
+                    Više informacija
+                  </span>
                 </div>
               </div>
             </AnimatedSection>

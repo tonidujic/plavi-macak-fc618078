@@ -586,51 +586,34 @@ const Contact = () => (
                   <a href="tel:+38763690014" className="text-gray-600 text-sm hover:text-primary transition-colors">+387 63 690 014</a>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl overflow-hidden flex-1 min-h-[180px] border border-border/50 shadow-warm">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d718.0809538498498!2d17.78498199999999!3d44.15429449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f1c4a29b43a1f%3A0x4c56f95e4ab1e06d!2sFitness%20centar%20Plavi%20ma%C4%8Dak!5e1!3m2!1s1!2sba!4v1749131478990!5m2!1s1!2sba&t=k"
-                  className="w-full h-full min-h-[180px]"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokacija Plavi Mačak Fitness"
-                />
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group">
+                <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-4">Pratite nas</h4>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="https://www.instagram.com/plavi_macak_fitness/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Instagram className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-gray-600 text-sm hover:text-primary transition-colors">@plavi_macak_fitness</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/fitnesscentarplavimacak/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Facebook className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-gray-600 text-sm hover:text-primary transition-colors">Fitness Centar Plavi Mačak</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Pratite nas */}
-      <AnimatedSection>
-        <div className="container mx-auto max-w-2xl text-center relative z-10 mt-20">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
-            Pratite <span className="text-gradient">nas</span>
-          </h2>
-          <div className="section-line mx-auto mb-6" />
-          <p className="text-muted-foreground mb-10">
-            Pronađite nas na društvenim mrežama za najnovije vijesti i akcije
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://www.instagram.com/plavi_macak_fitness/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 glass gradient-border rounded-xl px-6 py-4 shadow-warm hover:shadow-glow transition-all duration-500 hover:-translate-y-1 group w-full sm:w-auto justify-center"
-            >
-              <Instagram className="w-6 h-6 text-secondary group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
-              <span className="font-medium">@plavi_macak_fitness</span>
-            </a>
-            <a
-              href="https://www.facebook.com/fitnesscentarplavimacak/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 glass gradient-border rounded-xl px-6 py-4 shadow-warm hover:shadow-glow transition-all duration-500 hover:-translate-y-1 group w-full sm:w-auto justify-center"
-            >
-              <Facebook className="w-6 h-6 text-secondary group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
-              <span className="font-medium">Fitness Centar Plavi Mačak</span>
-            </a>
           </div>
         </div>
       </AnimatedSection>

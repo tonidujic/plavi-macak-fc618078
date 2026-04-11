@@ -505,7 +505,106 @@ const Contact = () => (
     <section id="kontakt" className="py-24 px-4 bg-background relative overflow-hidden">
       <div className="noise-overlay" />
       <AnimatedSection>
-        <div className="container mx-auto max-w-2xl text-center relative z-10">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+            Kontaktirajte <span className="text-gradient">nas</span>
+          </h2>
+          <div className="section-line mx-auto mb-6" />
+          <p className="text-muted-foreground text-center mb-12">
+            Želite postati dio naše obitelji ili imate pitanja? Javite nam se!
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Form */}
+            <div className="glass gradient-border rounded-2xl p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-foreground">Ime i prezime</label>
+                  <input
+                    type="text"
+                    placeholder="Vaše ime"
+                    className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-foreground">Email</label>
+                  <input
+                    type="email"
+                    placeholder="vas@email.com"
+                    className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  />
+                </div>
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-semibold mb-2 text-foreground">Predmet</label>
+                <input
+                  type="text"
+                  placeholder="Tema vaše poruke"
+                  className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-sm font-semibold mb-2 text-foreground">Poruka</label>
+                <textarea
+                  placeholder="Vaša poruka..."
+                  rows={4}
+                  className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                />
+              </div>
+              <button className="w-full bg-gradient-accent text-accent-foreground font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-wider">
+                <Send className="w-4 h-4" />
+                Pošalji poruku
+              </button>
+            </div>
+
+            {/* Contact Info + Map */}
+            <div className="flex flex-col gap-4">
+              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Adresa</h4>
+                  <p className="text-muted-foreground text-sm">Etno selo Čardaci, Vitez, BiH</p>
+                </div>
+              </div>
+              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Email</h4>
+                  <a href="mailto:plavimacak.fitness@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">plavimacak.fitness@gmail.com</a>
+                </div>
+              </div>
+              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Telefon</h4>
+                  <a href="tel:+38763690014" className="text-muted-foreground text-sm hover:text-primary transition-colors">+387 63 690 014</a>
+                </div>
+              </div>
+              <div className="glass gradient-border rounded-2xl overflow-hidden flex-1 min-h-[180px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d718.0809538498498!2d17.78498199999999!3d44.15429449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f1c4a29b43a1f%3A0x4c56f95e4ab1e06d!2sFitness%20centar%20Plavi%20ma%C4%8Dak!5e1!3m2!1s1!2sba!4v1749131478990!5m2!1s1!2sba&t=k"
+                  className="w-full h-full min-h-[180px]"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokacija Plavi Mačak Fitness"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Pratite nas */}
+      <AnimatedSection>
+        <div className="container mx-auto max-w-2xl text-center relative z-10 mt-20">
           <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
             Pratite <span className="text-gradient">nas</span>
           </h2>

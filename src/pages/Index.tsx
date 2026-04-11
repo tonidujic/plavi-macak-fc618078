@@ -588,7 +588,7 @@ const Contact = () => (
               </div>
               <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-6 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500">
                 <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-5">Pratite nas</h4>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4">
                   <a
                     href="https://www.instagram.com/plavi_macak_fitness/"
                     target="_blank"

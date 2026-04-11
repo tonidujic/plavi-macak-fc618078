@@ -511,7 +511,7 @@ const Contact = () => (
           </h2>
           <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-12">
-            Želite postati dio naše obitelji ili imate pitanja? Javite nam se!
+            Imate pitanje ili želite rezervirati termin? Tu smo za vas!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

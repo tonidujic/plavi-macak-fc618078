@@ -511,7 +511,7 @@ const Contact = () => (
           </h2>
           <div className="section-line mx-auto mb-6" />
           <p className="text-muted-foreground text-center mb-12">
-            Želite postati dio naše obitelji ili imate pitanja? Javite nam se!
+            Imate pitanje ili želite rezervirati termin? Tu smo za vas!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -559,34 +559,34 @@ const Contact = () => (
 
             {/* Contact Info + Map */}
             <div className="flex flex-col gap-4">
-              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm">
                 <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Adresa</h4>
-                  <p className="text-muted-foreground text-sm">Etno selo Čardaci, Vitez, BiH</p>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Adresa</h4>
+                  <p className="text-gray-600 text-sm">Etno selo Čardaci, Vitez, BiH</p>
                 </div>
               </div>
-              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm">
                 <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Email</h4>
-                  <a href="mailto:plavimacak.fitness@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">plavimacak.fitness@gmail.com</a>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Email</h4>
+                  <a href="mailto:plavimacak.fitness@gmail.com" className="text-gray-600 text-sm hover:text-primary transition-colors">plavimacak.fitness@gmail.com</a>
                 </div>
               </div>
-              <div className="glass gradient-border rounded-2xl px-6 py-5 flex items-center gap-4">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm">
                 <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-foreground">Telefon</h4>
-                  <a href="tel:+38763690014" className="text-muted-foreground text-sm hover:text-primary transition-colors">+387 63 690 014</a>
+                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Telefon</h4>
+                  <a href="tel:+38763690014" className="text-gray-600 text-sm hover:text-primary transition-colors">+387 63 690 014</a>
                 </div>
               </div>
-              <div className="glass gradient-border rounded-2xl overflow-hidden flex-1 min-h-[180px]">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl overflow-hidden flex-1 min-h-[180px] border border-border/50 shadow-warm">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d718.0809538498498!2d17.78498199999999!3d44.15429449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f1c4a29b43a1f%3A0x4c56f95e4ab1e06d!2sFitness%20centar%20Plavi%20ma%C4%8Dak!5e1!3m2!1s1!2sba!4v1749131478990!5m2!1s1!2sba&t=k"
                   className="w-full h-full min-h-[180px]"

@@ -516,7 +516,7 @@ const Contact = () => (
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <div className="glass gradient-border rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-8 border border-border/50 shadow-warm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className="block text-sm font-semibold mb-2 text-foreground">Ime i prezime</label>

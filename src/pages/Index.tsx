@@ -1,7 +1,7 @@
 import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
@@ -117,9 +117,11 @@ const Hero = () => {
         <div className="absolute inset-0">
           <img
             src={heroBg}
-            alt=""
+            alt="Plavi Mačak Fitness teretana"
             className="w-full h-full object-cover object-center scale-110"
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
             style={{ transform: `translateY(${offsetY * 0.3}px) scale(1.1)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.5)] to-[hsl(0_0%_0%/0.8)]" />

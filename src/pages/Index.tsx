@@ -516,39 +516,39 @@ const Contact = () => (
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <div className="glass gradient-border rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-8 border border-border/50 shadow-warm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground">Ime i prezime</label>
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">Ime i prezime</label>
                   <input
                     type="text"
                     placeholder="Vaše ime"
-                    className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold mb-2 text-foreground">Email</label>
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">Email</label>
                   <input
                     type="email"
                     placeholder="vas@email.com"
-                    className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                   />
                 </div>
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-semibold mb-2 text-foreground">Predmet</label>
+                <label className="block text-sm font-semibold mb-2 text-gray-900">Predmet</label>
                 <input
                   type="text"
                   placeholder="Tema vaše poruke"
-                  className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 />
               </div>
               <div className="mb-6">
-                <label className="block text-sm font-semibold mb-2 text-foreground">Poruka</label>
+                <label className="block text-sm font-semibold mb-2 text-gray-900">Poruka</label>
                 <textarea
                   placeholder="Vaša poruka..."
                   rows={4}
-                  className="w-full rounded-lg border border-border/50 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                  className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                 />
               </div>
               <button className="w-full bg-gradient-accent text-accent-foreground font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-wider">

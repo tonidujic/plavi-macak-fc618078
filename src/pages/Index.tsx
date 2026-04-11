@@ -72,23 +72,28 @@ const Navbar = () => {
 const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.muted = true;
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(video);
-    return () => observer.disconnect();
+    const setupAutoplay = (video: HTMLVideoElement | null) => {
+      if (!video) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            video.muted = true;
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(video);
+      return observer;
+    };
+    const o1 = setupAutoplay(videoRef.current);
+    const o2 = setupAutoplay(videoRef2.current);
+    return () => { o1?.disconnect(); o2?.disconnect(); };
   }, []);
   useEffect(() => {
     const onScroll = () => setOffsetY(window.scrollY);
@@ -157,49 +162,65 @@ const Hero = () => {
       <section className="py-24 px-4 bg-card relative overflow-hidden">
         <div className="noise-overlay" />
         <AnimatedSection>
-          <div className="container mx-auto max-w-2xl text-center relative z-10">
-             <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
-              <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
-              Grupni <span className="text-gradient">treninzi</span>
-            </h2>
-            <div className="section-line mx-auto mb-4" />
-            <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
-              Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
-            </p>
-            <div className="mx-auto max-w-md overflow-hidden shadow-glow" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 20px hsl(var(--primary) / 0.4)' }}>
-              {/* Instagram header */}
-              <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                    <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {/* Grupni treninzi */}
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
+                  <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
+                  Grupni <span className="text-gradient">treninzi</span>
+                </h2>
+                <div className="section-line mx-auto md:mx-0 mb-4" />
+                <p className="text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
+                  Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
+                </p>
+                <div className="mx-auto md:mx-0 max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                  <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
+                        <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
+                      </div>
+                    </div>
+                    <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold px-4 py-1.5 rounded-lg" style={{ background: '#0095f6', color: '#fff' }}>
+                      Prikaži profil
+                    </a>
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
-                    <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
-                  </div>
+                  <video ref={videoRef} src="/grupni-treninzi.mp4" controls muted playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Grupni treninzi - Plavi Mačak Fitness" />
                 </div>
-                <a
-                  href="https://www.instagram.com/plavi_macak_fitness/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold px-4 py-1.5 rounded-lg"
-                  style={{ background: '#0095f6', color: '#fff', textDecoration: 'none' }}
-                >
-                  Prikaži profil
-                </a>
               </div>
-              {/* Video */}
-              <video
-                ref={videoRef}
-                src="/grupni-treninzi.mp4"
-                controls
-                muted
-                playsInline
-                preload="metadata"
-                className="w-full aspect-[4/5] object-cover"
-                style={{ background: '#000' }}
-                title="Grupni treninzi - Plavi Mačak Fitness"
-              />
+
+              {/* Individualni treninzi */}
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
+                  <Dumbbell className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
+                  Individualni <span className="text-gradient">treninzi</span>
+                </h2>
+                <div className="section-line mx-auto md:mx-0 mb-4" />
+                <p className="text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
+                  Personalizirani pristup treningu uz stručno<br />vodstvo naših certificiranih trenera
+                </p>
+                <div className="mx-auto md:mx-0 max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                  <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
+                        <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
+                      </div>
+                    </div>
+                    <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold px-4 py-1.5 rounded-lg" style={{ background: '#0095f6', color: '#fff' }}>
+                      Prikaži profil
+                    </a>
+                  </div>
+                  <video ref={videoRef2} src="/individualni-treninzi.mp4" controls muted playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Individualni treninzi - Plavi Mačak Fitness" />
+                </div>
+              </div>
             </div>
           </div>
         </AnimatedSection>

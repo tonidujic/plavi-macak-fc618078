@@ -174,7 +174,7 @@ const Hero = () => {
                 <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                   Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
                 </p>
-                <div className="mx-auto md:mx-0 max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                <div className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
                   <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">

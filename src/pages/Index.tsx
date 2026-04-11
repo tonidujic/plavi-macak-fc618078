@@ -1,7 +1,7 @@
 import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.webp";
+import heroBg from "@/assets/hero-bg.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";

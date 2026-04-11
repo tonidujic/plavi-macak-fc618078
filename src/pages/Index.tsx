@@ -505,25 +505,48 @@ const Contact = () => (
     <section id="kontakt" className="py-24 px-4 bg-background relative overflow-hidden">
       <div className="noise-overlay" />
       <AnimatedSection>
-        <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
             Kontaktirajte <span className="text-gradient">nas</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
-          <p className="text-muted-foreground text-center mb-12">
+          <p className="text-muted-foreground text-center mb-14">
             Imate pitanje ili želite rezervirati termin? Tu smo za vas!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Contact Form */}
-            <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-8 border border-border/50 shadow-warm">
+          {/* Info cards row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              { icon: MapPin, label: "Adresa", value: "Etno selo Čardaci, Vitez", href: undefined },
+              { icon: Mail, label: "Email", value: "info@cardaci.ba", href: "mailto:info@cardaci.ba" },
+              { icon: Phone, label: "Telefon", value: "+387 63 690 014", href: "tel:+38763690014" },
+              { icon: Clock, label: "Radno vrijeme", value: "Pon - Sub: 08 - 22h", href: undefined },
+            ].map((item, i) => (
+              <div key={i} className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-5 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="font-bold text-xs uppercase tracking-wider text-gray-900 mb-1">{item.label}</h4>
+                {item.href ? (
+                  <a href={item.href} className="text-gray-600 text-sm hover:text-primary transition-colors">{item.value}</a>
+                ) : (
+                  <p className="text-gray-600 text-sm">{item.value}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            {/* Contact Form - wider */}
+            <div className="lg:col-span-3 bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-8 border border-border/50 shadow-warm">
+              <h3 className="font-bold text-gray-900 font-display text-lg mb-6">Pošaljite nam poruku</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className="block text-sm font-semibold mb-2 text-gray-900">Ime i prezime</label>
                   <input
                     type="text"
                     placeholder="Vaše ime"
-                    className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full rounded-lg border border-gray-300 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
                   />
                 </div>
                 <div>
@@ -531,7 +554,7 @@ const Contact = () => (
                   <input
                     type="email"
                     placeholder="vas@email.com"
-                    className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full rounded-lg border border-gray-300 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
                   />
                 </div>
               </div>
@@ -540,78 +563,68 @@ const Contact = () => (
                 <input
                   type="text"
                   placeholder="Tema vaše poruke"
-                  className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  className="w-full rounded-lg border border-gray-300 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
                 />
               </div>
               <div className="mb-6">
                 <label className="block text-sm font-semibold mb-2 text-gray-900">Poruka</label>
                 <textarea
                   placeholder="Vaša poruka..."
-                  rows={4}
-                  className="w-full rounded-lg border border-border/50 bg-white/60 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                  rows={5}
+                  className="w-full rounded-lg border border-gray-300 bg-white/70 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none"
                 />
               </div>
-              <button className="w-full bg-gradient-accent text-accent-foreground font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-wider">
+              <button className="w-full bg-gradient-accent text-accent-foreground font-bold py-3.5 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all duration-300 text-sm uppercase tracking-wider shadow-warm hover:shadow-glow">
                 <Send className="w-4 h-4" />
                 Pošalji poruku
               </button>
             </div>
 
-            {/* Contact Info + Map */}
-            <div className="flex flex-col gap-4">
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group cursor-default">
-                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Adresa</h4>
-                  <p className="text-gray-600 text-sm">Etno selo Čardaci, Vitez, BiH</p>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group cursor-default">
-                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Email</h4>
-                  <a href="mailto:plavimacak.fitness@gmail.com" className="text-gray-600 text-sm hover:text-primary transition-colors">plavimacak.fitness@gmail.com</a>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group cursor-default">
-                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Telefon</h4>
-                  <a href="tel:+38763690014" className="text-gray-600 text-sm hover:text-primary transition-colors">+387 63 690 014</a>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group">
-                <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-4">Pratite nas</h4>
-                <div className="flex flex-col gap-3">
+            {/* Social + Map */}
+            <div className="lg:col-span-2 flex flex-col gap-4">
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-6 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500">
+                <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-5">Pratite nas</h4>
+                <div className="flex flex-col gap-4">
                   <a
                     href="https://www.instagram.com/plavi_macak_fitness/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                    className="flex items-center gap-3 group/social"
                   >
-                    <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Instagram className="w-5 h-5 text-primary" />
+                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-yellow-400 flex items-center justify-center shrink-0 group-hover/social:scale-110 transition-transform duration-300">
+                      <Instagram className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-gray-600 text-sm hover:text-primary transition-colors">@plavi_macak_fitness</span>
+                    <div>
+                      <p className="text-gray-900 text-sm font-semibold">Instagram</p>
+                      <p className="text-gray-500 text-xs">@plavi_macak_fitness</p>
+                    </div>
                   </a>
                   <a
                     href="https://www.facebook.com/fitnesscentarplavimacak/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                    className="flex items-center gap-3 group/social"
                   >
-                    <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Facebook className="w-5 h-5 text-primary" />
+                    <div className="w-11 h-11 rounded-full bg-[#1877F2] flex items-center justify-center shrink-0 group-hover/social:scale-110 transition-transform duration-300">
+                      <Facebook className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-gray-600 text-sm hover:text-primary transition-colors">Fitness Centar Plavi Mačak</span>
+                    <div>
+                      <p className="text-gray-900 text-sm font-semibold">Facebook</p>
+                      <p className="text-gray-500 text-xs">Fitness Centar Plavi Mačak</p>
+                    </div>
                   </a>
                 </div>
+              </div>
+              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl overflow-hidden border border-border/50 shadow-warm flex-1 min-h-[200px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d718.0809538498498!2d17.78498199999999!3d44.15429449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f1c4a29b43a1f%3A0x4c56f95e4ab1e06d!2sFitness%20centar%20Plavi%20ma%C4%8Dak!5e1!3m2!1s1!2sba!4v1749131478990!5m2!1s1!2sba&t=k"
+                  className="w-full h-full min-h-[200px]"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokacija Plavi Mačak Fitness"
+                />
               </div>
             </div>
           </div>

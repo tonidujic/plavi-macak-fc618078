@@ -117,9 +117,11 @@ const Hero = () => {
         <div className="absolute inset-0">
           <img
             src={heroBg}
-            alt=""
+            alt="Plavi Mačak Fitness teretana"
             className="w-full h-full object-cover object-center scale-110"
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
             style={{ transform: `translateY(${offsetY * 0.3}px) scale(1.1)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.5)] to-[hsl(0_0%_0%/0.8)]" />

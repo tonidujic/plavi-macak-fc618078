@@ -77,11 +77,21 @@ const Hero = () => {
   useEffect(() => {
     const setupAutoplay = (video: HTMLVideoElement | null) => {
       if (!video) return;
+      const container = video.closest('[data-video-container]') as HTMLElement;
+      if (container) {
+        container.style.opacity = '0';
+        container.style.transform = 'translateY(30px)';
+        container.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+      }
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
             video.muted = true;
             video.play().catch(() => {});
+            if (container) {
+              container.style.opacity = '1';
+              container.style.transform = 'translateY(0)';
+            }
           } else {
             video.pause();
           }
@@ -174,7 +184,7 @@ const Hero = () => {
                 <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                   Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
                 </p>
-                <div className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
                   <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
@@ -189,7 +199,7 @@ const Hero = () => {
                       Prikaži profil
                     </a>
                   </div>
-                  <video ref={videoRef} src="/grupni-treninzi.mp4" controls muted playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Grupni treninzi - Plavi Mačak Fitness" />
+                  <video ref={videoRef} src="/grupni-treninzi.mp4" controls muted loop playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Grupni treninzi - Plavi Mačak Fitness" />
                 </div>
               </div>
 
@@ -203,7 +213,7 @@ const Hero = () => {
                 <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                   Personalizirani pristup treningu uz stručno<br />vodstvo naših certificiranih trenera
                 </p>
-                <div className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
                   <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
@@ -218,7 +228,7 @@ const Hero = () => {
                       Prikaži profil
                     </a>
                   </div>
-                  <video ref={videoRef2} src="/individualni-treninzi.mp4" controls muted playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Individualni treninzi - Plavi Mačak Fitness" />
+                  <video ref={videoRef2} src="/individualni-treninzi.mp4" controls muted loop playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Individualni treninzi - Plavi Mačak Fitness" />
                 </div>
               </div>
             </div>

@@ -72,23 +72,28 @@ const Navbar = () => {
 const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.muted = true;
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(video);
-    return () => observer.disconnect();
+    const setupAutoplay = (video: HTMLVideoElement | null) => {
+      if (!video) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            video.muted = true;
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(video);
+      return observer;
+    };
+    const o1 = setupAutoplay(videoRef.current);
+    const o2 = setupAutoplay(videoRef2.current);
+    return () => { o1?.disconnect(); o2?.disconnect(); };
   }, []);
   useEffect(() => {
     const onScroll = () => setOffsetY(window.scrollY);

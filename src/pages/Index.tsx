@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";

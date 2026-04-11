@@ -176,35 +176,6 @@ const Hero = () => {
         <AnimatedSection>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* Grupni treninzi */}
-              <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
-                  <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
-                  Grupni <span className="text-gradient">treninzi</span>
-                </h2>
-                <div className="section-line mx-auto mb-4" />
-                <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                  Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
-                </p>
-                <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
-                  <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
-                        <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
-                      </div>
-                    </div>
-                    <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold px-4 py-1.5 rounded-lg" style={{ background: '#0095f6', color: '#fff' }}>
-                      Prikaži profil
-                    </a>
-                  </div>
-                  <video ref={videoRef} src="/grupni-treninzi.mp4" controls muted loop playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Grupni treninzi - Plavi Mačak Fitness" />
-                </div>
-              </div>
-
               {/* Individualni treninzi */}
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
@@ -231,6 +202,35 @@ const Hero = () => {
                     </a>
                   </div>
                   <video ref={videoRef2} src="/individualni-treninzi.mp4" controls muted loop playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Individualni treninzi - Plavi Mačak Fitness" />
+                </div>
+              </div>
+
+              {/* Grupni treninzi */}
+              <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
+                  <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
+                  Grupni <span className="text-gradient">treninzi</span>
+                </h2>
+                <div className="section-line mx-auto mb-4" />
+                <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+                  Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
+                </p>
+                <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
+                  <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
+                        <p className="text-xs text-white/70 text-left">1414 pratitelja</p>
+                      </div>
+                    </div>
+                    <a href="https://www.instagram.com/plavi_macak_fitness/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold px-4 py-1.5 rounded-lg" style={{ background: '#0095f6', color: '#fff' }}>
+                      Prikaži profil
+                    </a>
+                  </div>
+                  <video ref={videoRef} src="/grupni-treninzi.mp4" controls muted loop playsInline preload="metadata" className="w-full aspect-[4/5] object-cover" style={{ background: '#000' }} title="Grupni treninzi - Plavi Mačak Fitness" />
                 </div>
               </div>
             </div>

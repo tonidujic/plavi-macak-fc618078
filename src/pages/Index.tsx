@@ -253,15 +253,20 @@ const About = () => (
           </h2>
           <div className="section-line mx-auto mb-8" />
            <div className="glass rounded-2xl p-8 md:p-12 gradient-border shadow-warm">
-            <p className="text-muted-foreground leading-relaxed text-lg">
-               Fitness centar <strong className="text-foreground">"Plavi Mačak"</strong> najveći je i
-               najmoderniji fitness objekt u Vitezu, unutar turističkog kompleksa{" "}
-               <strong className="text-foreground">Etno selo Čardaci</strong>. Obuhvaća prostor od
-               900 m², tri specijalizirane sale za trening sa više od 50 sprava te mnoštvom popratnih
-               rekvizita za vježbanje i Health Barom. Otvoren 2019. godine — nudimo vrhunski opremljenu
-               teretanu za sve razine spremnosti — od početnika do iskusnih sportaša. Naša misija je
-               pomoći vam da postignete svoje fitness ciljove u motivirajućem i profesionalnom okruženju.
-            </p>
+             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                Fitness centar <strong className="text-foreground">"Plavi Mačak"</strong> najveći je i
+                najmoderniji fitness objekt u Vitezu, unutar turističkog kompleksa{" "}
+                <strong className="text-foreground">Etno selo Čardaci</strong>.
+             </p>
+             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                Obuhvaća prostor od 900 m², tri specijalizirane sale za trening sa više od 50 sprava
+                te mnoštvom popratnih rekvizita za vježbanje i Health Barom.
+             </p>
+             <p className="text-muted-foreground leading-relaxed text-lg">
+                Otvoren 2019. godine — nudimo vrhunski opremljenu teretanu za sve razine spremnosti —
+                od početnika do iskusnih sportaša. Naša misija je pomoći vam da postignete svoje
+                fitness ciljove u motivirajućem i profesionalnom okruženju.
+             </p>
           </div>
         </div>
       </AnimatedSection>

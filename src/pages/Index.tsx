@@ -175,15 +175,15 @@ const Hero = () => {
         <div className="noise-overlay" />
         <AnimatedSection>
           <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
               {/* Individualni treninzi */}
-              <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
-                  <Dumbbell className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
-                  Individualni <span className="text-gradient">treninzi</span>
+              <div className="text-center flex flex-col">
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4 min-h-[4.5rem] flex items-center justify-center">
+                  <Dumbbell className="inline-block w-8 h-8 mr-2 text-secondary flex-shrink-0" />
+                  <span>Individualni <span className="text-gradient">treninzi</span></span>
                 </h2>
                 <div className="section-line mx-auto mb-4" />
-                <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+                <p className="text-muted-foreground mb-8 max-w-lg mx-auto min-h-[3rem]">
                   Personalizirani pristup treningu uz stručno<br />vodstvo naših certificiranih trenera
                 </p>
                 <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>
@@ -206,13 +206,13 @@ const Hero = () => {
               </div>
 
               {/* Grupni treninzi */}
-              <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4">
-                  <Users className="inline-block w-8 h-8 mr-2 text-secondary align-middle" />
-                  Grupni <span className="text-gradient">treninzi</span>
+              <div className="text-center flex flex-col">
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4 min-h-[4.5rem] flex items-center justify-center">
+                  <Users className="inline-block w-8 h-8 mr-2 text-secondary flex-shrink-0" />
+                  <span>Grupni <span className="text-gradient">treninzi</span></span>
                 </h2>
                 <div className="section-line mx-auto mb-4" />
-                <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+                <p className="text-muted-foreground mb-8 max-w-lg mx-auto min-h-[3rem]">
                   Pridružite se našim dinamičnim grupnim treninzima<br />i trenirajte u motivirajućoj atmosferi
                 </p>
                 <div data-video-container className="mx-auto max-w-md overflow-hidden" style={{ background: '#000', borderRadius: '12px', border: '2px solid hsl(var(--primary))', boxShadow: '0 0 12px hsl(var(--primary) / 0.25)' }}>

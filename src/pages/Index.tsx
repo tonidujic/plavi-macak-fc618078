@@ -207,8 +207,8 @@ const Hero = () => {
 
               {/* Grupni treninzi */}
               <div className="text-center flex flex-col">
-                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4 min-h-[4.5rem] flex items-center justify-center">
-                  <Users className="inline-block w-8 h-8 mr-2 text-secondary flex-shrink-0" />
+                <h2 className="text-3xl md:text-4xl font-extrabold font-display mb-4 min-h-[4.5rem] flex items-center justify-center gap-2">
+                  <Users className="w-8 h-8 text-secondary flex-shrink-0" />
                   <span>Grupni <span className="text-gradient">treninzi</span></span>
                 </h2>
                 <div className="section-line mx-auto mb-4" />

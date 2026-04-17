@@ -1,7 +1,11 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
+import ponudaSpa from "@/assets/ponuda-spa.jpeg";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
@@ -274,11 +278,40 @@ const About = () => (
   </>
 );
 
-const services = [
-  { icon: Dumbbell, title: "Teretana", desc: "Vrhunske sprave i slobodni tegovi za sve razine treninga" },
-  { icon: Users, title: "Treneri", desc: "Profesionalni treneri s individualnim pristupom" },
-  { icon: Zap, title: "Funkcionalni trening", desc: "Dinamični grupni treninzi za snagu i izdržljivost" },
-  { icon: Heart, title: "Kombinirani trening", desc: "Kombinacija kardio i strength vježbi za optimalne rezultate" },
+const sale = [
+  {
+    title: "Glavna teretana",
+    image: gallery1,
+    desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
+    items: [
+      "50+ profesionalnih sprava",
+      "Kardio zona s trakama za trčanje i eliptičnim trenažerima",
+      "Zona slobodnih utega i bumper ploča",
+      "Panoramski pogled na Etno selo kroz stakleni zid",
+    ],
+  },
+  {
+    title: "Funkcionalna sala",
+    image: gallery3,
+    desc: "Dinamični grupni treninzi pod vodstvom certificiranog trenera. Kavez, užad, ljestve — sve za snagu, izdržljivost i kondiciju.",
+    items: [
+      "Kavez za funkcionalni trening",
+      "Užad za penjanje i švedske ljestve",
+      "Grupni treninzi s certificiranim trenerom",
+      "Programi za snagu, izdržljivost i kondiciju",
+    ],
+  },
+  {
+    title: "Kombinirana sala",
+    image: gallery6,
+    desc: "Jedinstven prostor za ples, rehabilitaciju i korektivnu gimnastiku — jedina sala ove vrste u regiji.",
+    items: [
+      "Plesni programi",
+      "Rad s fizioterapeutom",
+      "Korektivna gimnastika za skoliozu i kralježnicu",
+      "Prilagođeni programi za rehabilitaciju",
+    ],
+  },
 ];
 
 const Services = () => (
@@ -286,29 +319,107 @@ const Services = () => (
     <SectionDivider variant="dots" />
     <section id="usluge" className="py-24 px-4 bg-card relative overflow-hidden">
       <div className="noise-overlay" />
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10">
         <AnimatedSection>
-           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
-            Naše <span className="text-gradient">usluge</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+            Naše <span className="text-gradient">sale</span>
           </h2>
           <div className="section-line mx-auto mb-6" />
-          <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
-            Sve što vam treba za postizanje fitness ciljeva na jednom mjestu
+          <p className="text-muted-foreground text-center mb-20 max-w-xl mx-auto">
+            Tri specijalizirana prostora za svaki stil treninga
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s, i) => (
-            <AnimatedSection key={s.title} delay={i * 120} variant={i < 2 ? "left" : "right"}>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-xl p-6 shadow-warm border border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow group h-full cursor-default">
-                <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center mb-4 icon-glow group-hover:scale-110 transition-all duration-500">
-                  <s.icon className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">{s.title}</h3>
-                <p className="text-sm text-gray-600">{s.desc}</p>
+
+        <div className="space-y-20 md:space-y-28">
+          {sale.map((s, i) => {
+            const imageLeft = i % 2 === 0;
+            return (
+              <div
+                key={s.title}
+                className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
+              >
+                <AnimatedSection
+                  variant={imageLeft ? "left" : "right"}
+                  className={`md:col-span-7 ${imageLeft ? "md:order-1" : "md:order-2"}`}
+                >
+                  <div className="overflow-hidden rounded-2xl gradient-border shadow-warm group">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="w-full h-[280px] md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection
+                  variant={imageLeft ? "right" : "left"}
+                  delay={150}
+                  className={`md:col-span-5 ${imageLeft ? "md:order-2" : "md:order-1"}`}
+                >
+                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground">
+                    {s.title}
+                  </h3>
+                  <div className="section-line mb-5 mx-0" />
+                  <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
+                  <ul className="space-y-3 mb-6">
+                    {s.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-gradient-accent flex items-center justify-center icon-glow">
+                          <Check className="w-3 h-3 text-accent-foreground" strokeWidth={3} />
+                        </span>
+                        <span className="text-sm md:text-base text-foreground/90">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="#galerija"
+                    className="inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors duration-200 group"
+                  >
+                    Pogledaj galeriju
+                    <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </a>
+                </AnimatedSection>
               </div>
-            </AnimatedSection>
-          ))}
+            );
+          })}
         </div>
+
+        {/* Blok 4 — Nakon treninga banner */}
+        <AnimatedSection variant="scale" className="mt-24">
+          <div className="relative overflow-hidden rounded-2xl gradient-border shadow-warm">
+            <div className="absolute inset-0">
+              <img src={ponudaSpa} alt="Spa & Wellness" className="w-full h-full object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
+            </div>
+            <div className="relative z-10 p-8 md:p-14">
+              <h3 className="text-2xl md:text-4xl font-extrabold font-display text-center mb-3">
+                Nakon <span className="text-gradient">treninga</span>
+              </h3>
+              <div className="section-line mx-auto mb-10" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <div className="glass rounded-xl p-6 md:p-7 text-center hover:scale-[1.02] transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
+                    <GlassWater className="w-7 h-7 text-accent-foreground" />
+                  </div>
+                  <h4 className="text-xl font-bold font-display mb-2 text-foreground">Health Bar</h4>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Niskokalorični napitci, proteinski shakeovi i suplementi — opusti se uz zdravi napitak nakon treninga.
+                  </p>
+                </div>
+                <div className="glass rounded-xl p-6 md:p-7 text-center hover:scale-[1.02] transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
+                    <Droplets className="w-7 h-7 text-accent-foreground" />
+                  </div>
+                  <h4 className="text-xl font-bold font-display mb-2 text-foreground">Spa & Wellness pristup</h4>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Članovi fitness centra imaju posebne pogodnosti za korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   </>

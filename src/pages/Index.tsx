@@ -283,8 +283,10 @@ const About = () => (
 const sale = [
   {
     title: "Glavna teretana",
-    imageTop: glavnaTeretana3,
-    imageBottom: glavnaTeretana2,
+    imageTop: glavnaTeretana2,
+    imageBottom: glavnaTeretana3,
+    imageTopPosition: "left center",
+    imageBottomPosition: "right center",
     desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
     items: [
       "50+ profesionalnih sprava",
@@ -345,6 +347,7 @@ const Services = () => (
                         alt={`${s.title} - pogled 1`}
                         loading="lazy"
                         className="w-full h-full object-cover"
+                        style={{ objectPosition: s.imageTopPosition ?? "center" }}
                       />
                     </div>
                     <div
@@ -356,7 +359,7 @@ const Services = () => (
                         alt={`${s.title} - pogled 2`}
                         loading="lazy"
                         className="w-full h-full object-cover"
-                        style={{ objectPosition: "center 75%" }}
+                        style={{ objectPosition: s.imageBottomPosition ?? "center" }}
                       />
                     </div>
                     <div className="absolute inset-0 pointer-events-none z-[2]">

@@ -2,9 +2,8 @@ import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, Chevro
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
-import gallery1 from "@/assets/gallery-1.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import glavnaTeretana from "@/assets/glavna-teretana.jpg";
 import ponudaSpa from "@/assets/ponuda-spa.jpeg";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
@@ -281,7 +280,7 @@ const About = () => (
 const sale = [
   {
     title: "Glavna teretana",
-    image: gallery1,
+    image: glavnaTeretana,
     desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
     items: [
       "50+ profesionalnih sprava",
@@ -299,17 +298,6 @@ const sale = [
       "Užad za penjanje i švedske ljestve",
       "Grupni treninzi s certificiranim trenerom",
       "Programi za snagu, izdržljivost i kondiciju",
-    ],
-  },
-  {
-    title: "Kombinirana sala",
-    image: gallery6,
-    desc: "Jedinstven prostor za ples, rehabilitaciju i korektivnu gimnastiku — jedina sala ove vrste u regiji.",
-    items: [
-      "Plesni programi",
-      "Rad s fizioterapeutom",
-      "Korektivna gimnastika za skoliozu i kralježnicu",
-      "Prilagođeni programi za rehabilitaciju",
     ],
   },
 ];

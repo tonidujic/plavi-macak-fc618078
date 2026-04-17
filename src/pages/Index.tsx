@@ -388,7 +388,7 @@ const Services = () => (
                   delay={150}
                   className={`md:col-span-5 ${imageLeft ? "md:order-2" : "md:order-1"}`}
                 >
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground text-center">
                     <span className="inline-block">
                       {s.title}
                       <span className="section-line block mt-2 mx-auto" />

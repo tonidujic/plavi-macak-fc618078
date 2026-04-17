@@ -8,6 +8,7 @@ import glavnaTeretana3 from "@/assets/glavna-teretana-3.jpg";
 import funkcionalna1 from "@/assets/funkcionalna-1.jpg";
 import funkcionalna2 from "@/assets/funkcionalna-2.jpg";
 import ponudaSpa from "@/assets/ponuda-spa.jpeg";
+import nakonTreningaBar from "@/assets/nakon-treninga-bar.jpg";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
@@ -418,9 +419,25 @@ const Services = () => (
         {/* Blok 4 — Nakon treninga banner */}
         <AnimatedSection variant="scale" className="mt-24">
           <div className="relative overflow-hidden rounded-2xl gradient-border shadow-warm">
-            <div className="absolute inset-0">
-              <img src={ponudaSpa} alt="Spa & Wellness" className="w-full h-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
+            <div className="absolute inset-0 diagonal-split">
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+              >
+                <img src={nakonTreningaBar} alt="Health Bar" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+              >
+                <img src={ponudaSpa} alt="Spa & Wellness" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div className="absolute inset-0 pointer-events-none z-[2]">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
+                  <line x1="100" y1="0" x2="0" y2="100" stroke="hsl(var(--secondary))" strokeWidth="0.35" />
+                </svg>
+              </div>
+              <div className="absolute inset-0 bg-background/80" />
             </div>
             <div className="relative z-10 p-8 md:p-14">
               <h3 className="text-2xl md:text-4xl font-extrabold font-display text-center mb-3">

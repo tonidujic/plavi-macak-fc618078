@@ -464,7 +464,7 @@ const Services = () => (
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold font-display mb-2 text-foreground">Spa & Wellness</h4>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Članovi fitness centra imaju posebne pogodnosti za korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
+                  Članovi fitness centra imaju pogodnosti korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
                 </p>
               </div>
             </div>

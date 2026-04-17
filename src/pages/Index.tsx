@@ -283,8 +283,8 @@ const About = () => (
 const sale = [
   {
     title: "Glavna teretana",
-    imageTop: glavnaTeretana2,
-    imageBottom: glavnaTeretana3,
+    imageTop: glavnaTeretana3,
+    imageBottom: glavnaTeretana2,
     desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
     items: [
       "50+ profesionalnih sprava",

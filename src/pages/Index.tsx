@@ -2,8 +2,11 @@ import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, Chevro
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
-import gallery3 from "@/assets/gallery-3.jpg";
 import glavnaTeretana from "@/assets/glavna-teretana.jpg";
+import glavnaTeretana2 from "@/assets/glavna-teretana-2.jpg";
+import glavnaTeretana3 from "@/assets/glavna-teretana-3.jpg";
+import funkcionalna1 from "@/assets/funkcionalna-1.jpg";
+import funkcionalna2 from "@/assets/funkcionalna-2.jpg";
 import ponudaSpa from "@/assets/ponuda-spa.jpeg";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
@@ -280,7 +283,8 @@ const About = () => (
 const sale = [
   {
     title: "Glavna teretana",
-    image: glavnaTeretana,
+    imageTop: glavnaTeretana2,
+    imageBottom: glavnaTeretana3,
     desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
     items: [
       "50+ profesionalnih sprava",
@@ -291,7 +295,8 @@ const sale = [
   },
   {
     title: "Funkcionalna sala",
-    image: gallery3,
+    imageTop: funkcionalna1,
+    imageBottom: funkcionalna2,
     desc: "Dinamični grupni treninzi pod vodstvom certificiranog trenera. Kavez, užad, ljestve — sve za snagu, izdržljivost i kondiciju.",
     items: [
       "Kavez za funkcionalni trening",
@@ -330,13 +335,46 @@ const Services = () => (
                   variant={imageLeft ? "left" : "right"}
                   className={`md:col-span-7 ${imageLeft ? "md:order-1" : "md:order-2"}`}
                 >
-                  <div className="overflow-hidden rounded-2xl gradient-border shadow-warm group">
-                    <img
-                      src={s.image}
-                      alt={s.title}
-                      loading="lazy"
-                      className="w-full h-[280px] md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                    />
+                  <div className="diagonal-split group relative overflow-hidden rounded-2xl gradient-border shadow-warm w-full h-[280px] md:h-[420px]">
+                    <div
+                      className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                      style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                    >
+                      <img
+                        src={s.imageTop}
+                        alt={`${s.title} - pogled 1`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div
+                      className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                      style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+                    >
+                      <img
+                        src={s.imageBottom}
+                        alt={`${s.title} - pogled 2`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute inset-0 pointer-events-none z-[2]">
+                      <svg
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                        className="w-full h-full"
+                      >
+                        <line
+                          x1="100"
+                          y1="0"
+                          x2="0"
+                          y2="100"
+                          stroke="hsl(var(--secondary))"
+                          strokeWidth="0.35"
+                          className="diagonal-line transition-all duration-300"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </AnimatedSection>
 

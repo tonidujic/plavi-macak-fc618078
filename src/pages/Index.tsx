@@ -388,10 +388,10 @@ const Services = () => (
                   delay={150}
                   className={`md:col-span-5 ${imageLeft ? "md:order-2" : "md:order-1"}`}
                 >
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground">
+                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground text-center md:text-left md:inline-block">
                     {s.title}
+                    <div className="section-line mt-2 mx-auto" />
                   </h3>
-                  <div className="section-line mb-5 mx-auto" />
                   <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                   <ul className="space-y-3 mb-6">
                     {s.items.map((item) => (

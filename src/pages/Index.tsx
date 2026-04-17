@@ -388,10 +388,12 @@ const Services = () => (
                   delay={150}
                   className={`md:col-span-5 ${imageLeft ? "md:order-2" : "md:order-1"}`}
                 >
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground">
-                    {s.title}
+                  <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground text-center md:text-left">
+                    <span className="inline-block">
+                      {s.title}
+                      <span className="section-line block mt-2 mx-auto" />
+                    </span>
                   </h3>
-                  <div className="section-line mb-5 mx-auto" />
                   <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                   <ul className="space-y-3 mb-6">
                     {s.items.map((item) => (
@@ -440,7 +442,7 @@ const Services = () => (
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold font-display mb-2 text-foreground">Health Bar</h4>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Niskokalorični napitci, proteinski shakeovi i suplementi — opusti se uz zdravi napitak nakon treninga.
+                  Niskokalorični napitci, proteinski shakeovi i suplementi, opusti se uz zdravi napitak nakon treninga.
                 </p>
               </div>
             </div>
@@ -462,7 +464,7 @@ const Services = () => (
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold font-display mb-2 text-foreground">Spa & Wellness</h4>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Članovi fitness centra imaju posebne pogodnosti za korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
+                  Članovi fitness centra imaju pogodnosti korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
                 </p>
               </div>
             </div>

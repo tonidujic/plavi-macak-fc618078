@@ -356,6 +356,7 @@ const Services = () => (
                         alt={`${s.title} - pogled 2`}
                         loading="lazy"
                         className="w-full h-full object-cover"
+                        style={{ objectPosition: "center 75%" }}
                       />
                     </div>
                     <div className="absolute inset-0 pointer-events-none z-[2]">

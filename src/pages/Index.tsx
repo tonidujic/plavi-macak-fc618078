@@ -796,7 +796,7 @@ const Contact = () => (
 const faqItems = [
   {
     q: "Koje su cijene članarina?",
-    a: "Nudimo razne pakete članarina prilagođene vašim potrebama. Kontaktirajte nas za detaljne informacije o cijenama i trenutnim akcijama.",
+    a: "Nudimo razne pakete članarina prilagođene vašim potrebama.\nKontaktirajte nas za detaljne informacije o cijenama i trenutnim akcijama.",
   },
   {
     q: "Da li nudite personalni trening?",
@@ -858,7 +858,7 @@ const FAQ = () => {
                       openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="px-6 pb-5 text-gray-600 leading-relaxed text-sm">
+                    <p className="px-6 pb-5 text-gray-600 leading-relaxed text-sm whitespace-pre-line">
                       {item.a}
                     </p>
                   </div>

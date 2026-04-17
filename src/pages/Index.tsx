@@ -286,7 +286,7 @@ const sale = [
     imageTop: glavnaTeretana2,
     imageBottom: glavnaTeretana3,
     imageTopPosition: "left center",
-    imageBottomPosition: "right center",
+    imageBottomPosition: "100% center",
     desc: "Najveći prostor u centru — potpuno opremljen za individualni trening svih razina, od početnika do iskusnih sportaša.",
     items: [
       "50+ profesionalnih sprava",

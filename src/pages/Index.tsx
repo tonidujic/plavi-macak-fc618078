@@ -416,53 +416,54 @@ const Services = () => (
           })}
         </div>
 
-        {/* Blok 4 — Nakon treninga banner */}
+        {/* Blok 4 — Nakon treninga */}
         <AnimatedSection variant="scale" className="mt-24">
-          <div className="relative overflow-hidden rounded-2xl gradient-border shadow-warm">
-            <div className="absolute inset-0 diagonal-split">
-              <div
-                className="absolute inset-0"
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
-              >
-                <img src={nakonTreningaBar} alt="Health Bar" className="w-full h-full object-cover" loading="lazy" />
+          <h3 className="text-2xl md:text-4xl font-extrabold font-display text-center mb-3">
+            Nakon <span className="text-gradient">treninga</span>
+          </h3>
+          <div className="section-line mx-auto mb-10" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {/* Health Bar */}
+            <div className="relative overflow-hidden rounded-2xl gradient-border shadow-warm group">
+              <div className="absolute inset-0">
+                <img
+                  src={nakonTreningaBar}
+                  alt="Health Bar"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                />
+                <div className="absolute inset-0 bg-background/75" />
               </div>
-              <div
-                className="absolute inset-0"
-                style={{ clipPath: "polygon(0 0, 0 100%, 100% 100%)" }}
-              >
-                <img src={ponudaSpa} alt="Spa & Wellness" className="w-full h-full object-cover" loading="lazy" />
+              <div className="relative z-10 p-6 md:p-8 text-center min-h-[260px] md:min-h-[300px] flex flex-col items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
+                  <GlassWater className="w-7 h-7 text-accent-foreground" />
+                </div>
+                <h4 className="text-xl md:text-2xl font-bold font-display mb-2 text-foreground">Health Bar</h4>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Niskokalorični napitci, proteinski shakeovi i suplementi — opusti se uz zdravi napitak nakon treninga.
+                </p>
               </div>
-              <div className="absolute inset-0 pointer-events-none z-[2]">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full">
-                  <line x1="0" y1="0" x2="100" y2="100" stroke="hsl(var(--secondary))" strokeWidth="0.35" />
-                </svg>
-              </div>
-              <div className="absolute inset-0 bg-background/80" />
             </div>
-            <div className="relative z-10 p-8 md:p-14">
-              <h3 className="text-2xl md:text-4xl font-extrabold font-display text-center mb-3">
-                Nakon <span className="text-gradient">treninga</span>
-              </h3>
-              <div className="section-line mx-auto mb-10" />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-                <div className="glass-strong rounded-xl p-6 md:p-7 text-center hover:scale-[1.02] transition-transform duration-300">
-                  <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
-                    <GlassWater className="w-7 h-7 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-xl font-bold font-display mb-2 text-foreground">Health Bar</h4>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Niskokalorični napitci, proteinski shakeovi i suplementi — opusti se uz zdravi napitak nakon treninga.
-                  </p>
+
+            {/* Spa & Wellness */}
+            <div className="relative overflow-hidden rounded-2xl gradient-border shadow-warm group">
+              <div className="absolute inset-0">
+                <img
+                  src={ponudaSpa}
+                  alt="Spa & Wellness"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                />
+                <div className="absolute inset-0 bg-background/75" />
+              </div>
+              <div className="relative z-10 p-6 md:p-8 text-center min-h-[260px] md:min-h-[300px] flex flex-col items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
+                  <Droplets className="w-7 h-7 text-accent-foreground" />
                 </div>
-                <div className="glass-strong rounded-xl p-6 md:p-7 text-center hover:scale-[1.02] transition-transform duration-300">
-                  <div className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center mx-auto mb-4 icon-glow">
-                    <Droplets className="w-7 h-7 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-xl font-bold font-display mb-2 text-foreground">Spa & Wellness</h4>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Članovi fitness centra imaju posebne pogodnosti za korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
-                  </p>
-                </div>
+                <h4 className="text-xl md:text-2xl font-bold font-display mb-2 text-foreground">Spa & Wellness</h4>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Članovi fitness centra imaju posebne pogodnosti za korištenje finske saune, turske kupelji i hidromasažnog bazena u Spa centru Čardaci.
+                </p>
               </div>
             </div>
           </div>

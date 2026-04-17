@@ -390,7 +390,7 @@ const Services = () => (
                   <h3 className="text-2xl md:text-3xl font-extrabold font-display mb-4 text-foreground">
                     {s.title}
                   </h3>
-                  <div className="section-line mb-5 mx-0" />
+                  <div className="section-line mb-5 mx-auto" />
                   <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                   <ul className="space-y-3 mb-6">
                     {s.items.map((item) => (

@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets, ShieldCheck, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
@@ -9,6 +9,8 @@ import funkcionalna1 from "@/assets/funkcionalna-1.jpg";
 import funkcionalna2 from "@/assets/funkcionalna-2.jpg";
 import ponudaSpa from "@/assets/ponuda-spa.jpeg";
 import nakonTreningaBar from "@/assets/nakon-treninga-bar.jpg";
+import trenerJosip from "@/assets/trener-josip.jpg";
+import trenerAnita from "@/assets/trener-anita.png";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
@@ -49,6 +51,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6 text-sm font-extrabold font-heading tracking-wider uppercase">
           {[
             { href: "#usluge", label: "Usluge" },
+            { href: "#treneri", label: "Treneri" },
             { href: "#recenzije", label: "Recenzije" },
             { href: "#galerija", label: "Galerija" },
             { href: "#o-nama", label: "O nama" },

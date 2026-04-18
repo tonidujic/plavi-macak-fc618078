@@ -487,7 +487,7 @@ const trainers = [
     quals: [
       "Certificirani fitness instruktor (EQF Level 3, EREPS)",
       "Certificirani funkcionalni trener (CFT1)",
-      "1. mjesto — Državno prvenstvo u Bodybuildingu (2019.)",
+      "1. mjesto — Državno prvenstvo BiH u Bodybuildingu (2019.)",
       "1. mjesto — Yamamoto Jagodina Open (2020. i 2021.)",
     ],
   },
@@ -529,12 +529,12 @@ const Trainers = () => (
               variant={i === 0 ? "left" : "right"}
             >
               <article className="group rounded-2xl overflow-hidden border border-primary/20 bg-card/50 shadow-warm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] h-full flex flex-col">
-                <div className="relative aspect-[3/4] overflow-hidden bg-background">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <img
                     src={t.img}
                     alt={t.name}
                     loading="lazy"
-                    className="w-full h-full object-contain transition-transform duration-500"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 </div>

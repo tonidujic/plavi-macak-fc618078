@@ -23,6 +23,16 @@ import g17 from "@/assets/galerija/g17.jpg";
 import g18 from "@/assets/galerija/g18.jpg";
 import g19 from "@/assets/galerija/g19.jpg";
 import g20 from "@/assets/galerija/g20.jpg";
+import g21 from "@/assets/galerija/g21.jpg";
+import g22 from "@/assets/galerija/g22.jpg";
+import g23 from "@/assets/galerija/g23.jpg";
+import g24 from "@/assets/galerija/g24.jpg";
+import g25 from "@/assets/galerija/g25.jpg";
+import g26 from "@/assets/galerija/g26.jpg";
+import g27 from "@/assets/galerija/g27.jpg";
+import g28 from "@/assets/galerija/g28.jpg";
+import g29 from "@/assets/galerija/g29.jpg";
+import g30 from "@/assets/galerija/g30.jpg";
 
 const images = [
   { src: g1, alt: "Zona sa spravama i ogledalima" },
@@ -45,6 +55,16 @@ const images = [
   { src: g18, alt: "Pogled na cijelu teretanu" },
   { src: g19, alt: "Recepcija i fitness shop" },
   { src: g20, alt: "Kardio zona s pogledom" },
+  { src: g21, alt: "Bučice uz prozor s pogledom" },
+  { src: g22, alt: "Svlačionica i tuševi" },
+  { src: g23, alt: "Funkcionalna zona — kettlebellovi i konopi" },
+  { src: g24, alt: "Trake za trčanje uz velike prozore" },
+  { src: g25, alt: "Kettlebellovi i oprema za trening" },
+  { src: g26, alt: "Bučice s pogledom na prirodu" },
+  { src: g27, alt: "Tuševi i umivaonici" },
+  { src: g28, alt: "Kardio zona — širi pogled" },
+  { src: g29, alt: "Shake u baru — atmosfera" },
+  { src: g30, alt: "Glavna sala — pogled" },
 ];
 
 const GalerijaPage = () => {

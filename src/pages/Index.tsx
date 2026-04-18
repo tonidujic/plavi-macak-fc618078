@@ -1,4 +1,4 @@
-import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets, ShieldCheck, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.webp";
@@ -9,6 +9,8 @@ import funkcionalna1 from "@/assets/funkcionalna-1.jpg";
 import funkcionalna2 from "@/assets/funkcionalna-2.jpg";
 import ponudaSpa from "@/assets/ponuda-spa.jpeg";
 import nakonTreningaBar from "@/assets/nakon-treninga-bar.jpg";
+import trenerJosip from "@/assets/trener-josip.jpg";
+import trenerAnita from "@/assets/trener-anita.png";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
 import TypewriterText from "@/components/TypewriterText";
@@ -49,6 +51,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6 text-sm font-extrabold font-heading tracking-wider uppercase">
           {[
             { href: "#usluge", label: "Usluge" },
+            { href: "#treneri", label: "Treneri" },
             { href: "#recenzije", label: "Recenzije" },
             { href: "#galerija", label: "Galerija" },
             { href: "#o-nama", label: "O nama" },
@@ -470,6 +473,94 @@ const Services = () => (
             </div>
           </div>
         </AnimatedSection>
+      </div>
+    </section>
+  </>
+);
+
+const trainers = [
+  {
+    img: trenerJosip,
+    name: "Josip Filipović",
+    role: "Instruktor fitnessa & voditelj funkcionalnih treninga",
+    bio: "Judo majstor, natjecatelj i certificirani trener s višegodišnjim iskustvom. Josip kombinira znanje borilačkih vještina i modernog fitnessa kako bi svakom članu pomogao ostvariti maksimalne rezultate.",
+    quals: [
+      "Certificirani fitness instruktor (EQF Level 3, EREPS)",
+      "Certificirani funkcionalni trener (CFT1)",
+      "1. mjesto — Državno prvenstvo BiH u Bodybuildingu (2019.)",
+      "1. mjesto — Yamamoto Jagodina Open (2020. i 2021.)",
+    ],
+  },
+  {
+    img: trenerAnita,
+    name: "Anita Josipović",
+    role: "Fitness trenerica & voditeljica grupnih programa",
+    bio: "Anita vodi grupne treninge i pomaže članovima u postizanju fitness ciljeva s naglaskom na pravilnu tehniku i motivaciju. Njezin pristup spaja energičnu atmosferu grupnih treninga s individualnom pažnjom prema svakom polazniku.",
+    quals: [
+      "Certificirana fitness trenerica",
+      "Voditeljica grupnih programa",
+      "Specijalizacija za funkcionalni trening",
+      "Individualni pristup i prilagođeni programi",
+    ],
+  },
+];
+
+const Trainers = () => (
+  <>
+    <SectionDivider variant="wave" flip className="bg-card" />
+    <section id="treneri" className="py-24 px-4 bg-background relative overflow-hidden">
+      <div className="noise-overlay" />
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <AnimatedSection>
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-center mb-4">
+            Naši <span className="text-gradient">treneri</span>
+          </h2>
+          <p className="text-muted-foreground text-center mb-4 max-w-xl mx-auto">
+            Stručnost, iskustvo i individualni pristup svakom članu
+          </p>
+          <div className="section-line mx-auto mb-16" />
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {trainers.map((t, i) => (
+            <AnimatedSection
+              key={t.name}
+              delay={i * 200}
+              variant={i === 0 ? "left" : "right"}
+            >
+              <article className="group rounded-2xl overflow-hidden border border-primary/20 bg-card/50 shadow-warm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] h-full flex flex-col">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <img
+                    src={t.img}
+                    alt={t.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl md:text-2xl font-bold font-display text-foreground">
+                    {t.name}
+                  </h3>
+                  <p className="text-sm md:text-[15px] text-secondary font-semibold mt-1 mb-4">
+                    {t.role}
+                  </p>
+                  <p className="text-[15px] text-muted-foreground leading-relaxed mb-5">
+                    {t.bio}
+                  </p>
+                  <ul className="space-y-2 mt-auto">
+                    {t.quals.map((q) => (
+                      <li key={q} className="flex items-start gap-2 text-sm text-foreground/90">
+                        <ShieldCheck className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                        <span>{q}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </AnimatedSection>
+          ))}
+        </div>
       </div>
     </section>
   </>
@@ -973,6 +1064,7 @@ const Index = () => (
     <Navbar />
     <Hero />
     <Services />
+    <Trainers />
     <About />
     <CounterSection />
     <Schedule />

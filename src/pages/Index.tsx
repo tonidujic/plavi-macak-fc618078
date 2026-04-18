@@ -1,7 +1,7 @@
 import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets, ShieldCheck, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.webp";
+import heroBg from "@/assets/hero-bg.jpg";
 import glavnaTeretana from "@/assets/glavna-teretana.jpg";
 import glavnaTeretana2 from "@/assets/glavna-teretana-2.jpg";
 import glavnaTeretana3 from "@/assets/glavna-teretana-3.jpg";
@@ -128,7 +128,7 @@ const Hero = () => {
           <img
             src={heroBg}
             alt="Plavi Mačak Fitness teretana"
-            className="w-full h-full object-cover object-center scale-110"
+            className="w-full h-full object-cover object-center scale-110 blur-sm"
             loading="eager"
             fetchPriority="high"
             decoding="async"

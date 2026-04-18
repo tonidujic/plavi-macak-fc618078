@@ -535,6 +535,7 @@ const Trainers = () => (
                     alt={t.name}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectPosition: t.name.startsWith("Anita") ? "70% center" : "center" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 </div>

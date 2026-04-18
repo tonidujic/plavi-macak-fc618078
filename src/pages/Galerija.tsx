@@ -13,6 +13,16 @@ import g7 from "@/assets/galerija/g7.jpg";
 import g8 from "@/assets/galerija/g8.jpg";
 import g9 from "@/assets/galerija/g9.jpg";
 import g10 from "@/assets/galerija/g10.jpg";
+import g11 from "@/assets/galerija/g11.jpg";
+import g12 from "@/assets/galerija/g12.jpg";
+import g13 from "@/assets/galerija/g13.jpg";
+import g14 from "@/assets/galerija/g14.jpg";
+import g15 from "@/assets/galerija/g15.jpg";
+import g16 from "@/assets/galerija/g16.jpg";
+import g17 from "@/assets/galerija/g17.jpg";
+import g18 from "@/assets/galerija/g18.jpg";
+import g19 from "@/assets/galerija/g19.jpg";
+import g20 from "@/assets/galerija/g20.jpg";
 
 const images = [
   { src: g1, alt: "Zona sa spravama i ogledalima" },
@@ -25,6 +35,16 @@ const images = [
   { src: g8, alt: "Bar i fitness shop" },
   { src: g9, alt: "Detalj — kardio zona" },
   { src: g10, alt: "Funkcionalna zona" },
+  { src: g11, alt: "Osvježenje nakon treninga" },
+  { src: g12, alt: "Stalak s bučicama" },
+  { src: g13, alt: "Funkcionalna zona — širi pogled" },
+  { src: g14, alt: "Hammer Strength sprava — detalj" },
+  { src: g15, alt: "Trake za trčanje uz prozore" },
+  { src: g16, alt: "Šipka s utezima" },
+  { src: g17, alt: "Zona sa spravama — atmosfera" },
+  { src: g18, alt: "Pogled na cijelu teretanu" },
+  { src: g19, alt: "Recepcija i fitness shop" },
+  { src: g20, alt: "Kardio zona s pogledom" },
 ];
 
 const GalerijaPage = () => {

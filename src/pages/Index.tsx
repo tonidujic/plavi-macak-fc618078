@@ -540,19 +540,19 @@ const Trainers = () => (
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-[1.2rem] flex flex-col flex-1">
-                  <h3 className="text-base md:text-lg font-bold font-display text-foreground">
+                  <h3 className="text-[18px] md:text-[21px] font-bold font-display text-foreground">
                     {t.name}
                   </h3>
-                  <p className="text-xs md:text-[12px] text-secondary font-semibold mt-1 mb-3">
+                  <p className="text-[14px] md:text-[14px] text-secondary font-semibold mt-1 mb-3">
                     {t.role}
                   </p>
-                  <p className="text-[12px] text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-[14px] text-muted-foreground leading-relaxed mb-4">
                     {t.bio}
                   </p>
                   <ul className="space-y-1.5 mt-auto">
                     {t.quals.map((q) => (
-                      <li key={q} className="flex items-start gap-2 text-xs text-foreground/90">
-                        <ShieldCheck className="w-3 h-3 text-secondary flex-shrink-0 mt-0.5" />
+                      <li key={q} className="flex items-start gap-2 text-[14px] text-foreground/90">
+                        <ShieldCheck className="w-3.5 h-3.5 text-secondary flex-shrink-0 mt-0.5" />
                         <span>{q}</span>
                       </li>
                     ))}

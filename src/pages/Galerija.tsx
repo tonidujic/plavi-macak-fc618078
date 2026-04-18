@@ -111,7 +111,9 @@ const GalerijaPage = () => {
               </h1>
               <div className="section-line mb-6" />
               <p className="text-muted-foreground text-lg max-w-xl">
-                Pogledajte našu kompletnu galeriju i upoznajte prostor u kojem ćete trenirati
+                Pogledajte našu kompletnu galeriju
+                <br />
+                i upoznajte prostor u kojem ćete trenirati
               </p>
             </div>
           </div>

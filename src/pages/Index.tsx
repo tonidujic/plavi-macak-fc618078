@@ -487,8 +487,8 @@ const trainers = [
     quals: [
       "Certificirani fitness instruktor (EQF Level 3, EREPS)",
       "Certificirani funkcionalni trener (CFT1)",
-      "1. mjesto — Državno prvenstvo u Bodybuildingu (2019.)",
-      "1. mjesto — Yamamoto Jagodina Open (2020. i 2021.)",
+      "1. mjesto — Državno prvenstvo u Bodybuildingu ('19)",
+      "1. mjesto — Yamamoto Jagodina Open ('20 i '21)",
     ],
   },
   {

@@ -2,12 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
@@ -16,12 +10,6 @@ import gallery11 from "@/assets/gallery-11.jpg";
 import gallery12 from "@/assets/gallery-12.jpg";
 
 const images = [
-  { src: gallery1, alt: "Kardio zona s trakama za trčanje" },
-  { src: gallery2, alt: "Glavni prostor teretane sa spravama" },
-  { src: gallery3, alt: "Prostor za funkcionalni trening" },
-  { src: gallery4, alt: "Zona za vježbanje i street workout" },
-  { src: gallery5, alt: "Recepcija i fitness shop" },
-  { src: gallery6, alt: "Tegovi i bumper ploče" },
   { src: gallery7, alt: "Bučice s pogledom na prirodu" },
   { src: gallery8, alt: "Hammer Strength zona" },
   { src: gallery9, alt: "Bar i fitness shop" },

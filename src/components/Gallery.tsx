@@ -10,11 +10,11 @@ import gallery11 from "@/assets/gallery-11.jpg";
 import gallery12 from "@/assets/gallery-12.jpg";
 
 const images = [
-  { src: gallery9, alt: "Bar i fitness shop" },
-  { src: gallery7, alt: "Bučice s pogledom na prirodu" },
+  { src: gallery9, alt: "Health bar" },
+  { src: gallery7, alt: "Slobodni tegovi" },
   { src: gallery8, alt: "Hammer Strength zona" },
   { src: gallery12, alt: "Sala za grupne treninge" },
-  { src: gallery10, alt: "Trake za trčanje uz natpise" },
+  { src: gallery10, alt: "Trake za trčanje" },
   { src: gallery11, alt: "Svlačionice i tuševi" },
 ];
 

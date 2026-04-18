@@ -33,6 +33,16 @@ import g27 from "@/assets/galerija/g27.jpg";
 import g28 from "@/assets/galerija/g28.jpg";
 import g29 from "@/assets/galerija/g29.jpg";
 import g30 from "@/assets/galerija/g30.jpg";
+import g31 from "@/assets/galerija/g31.jpg";
+import g32 from "@/assets/galerija/g32.jpg";
+import g33 from "@/assets/galerija/g33.jpg";
+import g34 from "@/assets/galerija/g34.jpg";
+import g35 from "@/assets/galerija/g35.jpg";
+import g36 from "@/assets/galerija/g36.jpg";
+import g37 from "@/assets/galerija/g37.jpg";
+import g38 from "@/assets/galerija/g38.jpg";
+import g39 from "@/assets/galerija/g39.jpg";
+import g40 from "@/assets/galerija/g40.jpg";
 
 const images = [
   { src: g1, alt: "Zona sa spravama i ogledalima" },
@@ -65,6 +75,16 @@ const images = [
   { src: g28, alt: "Kardio zona — širi pogled" },
   { src: g29, alt: "Shake u baru — atmosfera" },
   { src: g30, alt: "Glavna sala — pogled" },
+  { src: g31, alt: "Stalak s kettlebellovima u boji" },
+  { src: g32, alt: "Hammer Strength zona — širi pogled" },
+  { src: g33, alt: "Funkcionalna zona s monkey barovima" },
+  { src: g34, alt: "Grupni trening u glavnoj sali" },
+  { src: g35, alt: "Atmosfera grupnog treninga" },
+  { src: g36, alt: "Grupni kardio trening na trakama" },
+  { src: g37, alt: "Šarene svlačionice — pogled 1" },
+  { src: g38, alt: "Šarene svlačionice — pogled 2" },
+  { src: g39, alt: "Shake u baru s pogledom" },
+  { src: g40, alt: "Funkcionalna zona — širi pogled" },
 ];
 
 const GalerijaPage = () => {

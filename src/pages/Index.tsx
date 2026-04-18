@@ -128,7 +128,7 @@ const Hero = () => {
           <img
             src={heroBg}
             alt="Plavi Mačak Fitness teretana"
-            className="w-full h-full object-cover object-center scale-110 blur-sm"
+            className="w-full h-full object-cover object-center scale-110 blur-[2px]"
             loading="eager"
             fetchPriority="high"
             decoding="async"

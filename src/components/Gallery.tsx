@@ -8,6 +8,12 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
+import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
+import gallery11 from "@/assets/gallery-11.jpg";
+import gallery12 from "@/assets/gallery-12.jpg";
 
 const images = [
   { src: gallery1, alt: "Kardio zona s trakama za trčanje" },
@@ -16,6 +22,12 @@ const images = [
   { src: gallery4, alt: "Zona za vježbanje i street workout" },
   { src: gallery5, alt: "Recepcija i fitness shop" },
   { src: gallery6, alt: "Tegovi i bumper ploče" },
+  { src: gallery7, alt: "Bučice s pogledom na prirodu" },
+  { src: gallery8, alt: "Hammer Strength zona" },
+  { src: gallery9, alt: "Bar i fitness shop" },
+  { src: gallery10, alt: "Trake za trčanje uz natpise" },
+  { src: gallery11, alt: "Svlačionice i tuševi" },
+  { src: gallery12, alt: "Sala za grupne treninge" },
 ];
 
 const Gallery = () => {

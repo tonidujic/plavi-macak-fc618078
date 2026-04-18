@@ -566,6 +566,7 @@ const Trainers = () => (
   </>
 );
 
+const schedule = [
   { day: "Ponedjeljak – Petak", hours: "07:00 – 22:00" },
   { day: "Subota", hours: "09:00 – 21:00" },
   { day: "Nedjelja", hours: "07:00 – 22:00" },

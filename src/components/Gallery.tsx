@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import gallery7 from "@/assets/gallery-7.jpg";
-import gallery8 from "@/assets/gallery-8.jpg";
-import gallery9 from "@/assets/gallery-9.jpg";
-import gallery10 from "@/assets/gallery-10.jpg";
-import gallery11 from "@/assets/gallery-11.jpg";
-import gallery12 from "@/assets/gallery-12.jpg";
+import gallery7 from "@/assets/gallery-7.webp";
+import gallery8 from "@/assets/gallery-8.webp";
+import gallery9 from "@/assets/gallery-9.webp";
+import gallery10 from "@/assets/gallery-10.webp";
+import gallery11 from "@/assets/gallery-11.webp";
+import gallery12 from "@/assets/gallery-12.webp";
 
 const images = [
   { src: gallery9, alt: "Health bar" },

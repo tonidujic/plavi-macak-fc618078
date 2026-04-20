@@ -1,10 +1,10 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionDivider from "@/components/SectionDivider";
-import pivnicaImg from "@/assets/ponuda-pivnica.jpeg";
-import etnoImg from "@/assets/ponuda-etno.jpg";
-import vodeniparkImg from "@/assets/ponuda-vodenipark.jpeg";
-import spaImg from "@/assets/ponuda-spa.jpeg";
-import restoranImg from "@/assets/ponuda-restoran.jpg";
+import pivnicaImg from "@/assets/ponuda-pivnica.webp";
+import etnoImg from "@/assets/ponuda-etno.webp";
+import vodeniparkImg from "@/assets/ponuda-vodenipark.webp";
+import spaImg from "@/assets/ponuda-spa.webp";
+import restoranImg from "@/assets/ponuda-restoran.webp";
 
 const offerings = [
   { subtitle: "ETNO SELO", title: "Bajkovit\nodmor", img: etnoImg, link: "https://www.cardaci.ba/offers/etno-selo/" },

@@ -853,33 +853,33 @@ const Contact = () => (
               </div>
               <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-6 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500">
                 <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-5">Pratite nas</h4>
-                <div className="flex flex-row gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   <a
                     href="https://www.instagram.com/plavi_macak_fitness/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 group/social"
+                    className="flex items-center gap-2 group/social min-w-0"
                   >
                     <div className="w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-yellow-400 flex items-center justify-center shrink-0 group-hover/social:scale-110 transition-transform duration-300">
                       <Instagram className="w-5 h-5 text-white" />
                     </div>
-                    <div>
-                      <p className="text-gray-900 text-sm font-semibold">Instagram</p>
-                      <p className="text-gray-500 text-xs">@plavi_macak_fitness</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-gray-900 text-sm font-semibold leading-tight">Instagram</p>
+                      <p className="text-gray-500 text-xs truncate">@plavi_macak_fitness</p>
                     </div>
                   </a>
                   <a
                     href="https://www.facebook.com/fitnesscentarplavimacak/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 group/social"
+                    className="flex items-center gap-2 group/social min-w-0"
                   >
                     <div className="w-11 h-11 rounded-full bg-[#1877F2] flex items-center justify-center shrink-0 group-hover/social:scale-110 transition-transform duration-300">
                       <Facebook className="w-5 h-5 text-white" />
                     </div>
-                    <div>
-                      <p className="text-gray-900 text-sm font-semibold">Facebook</p>
-                      <p className="text-gray-500 text-xs">Fitness Centar Plavi Mačak</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-gray-900 text-sm font-semibold leading-tight">Facebook</p>
+                      <p className="text-gray-500 text-xs leading-tight">Plavi Mačak</p>
                     </div>
                   </a>
                 </div>

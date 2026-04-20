@@ -1,7 +1,5 @@
 import { MapPin, Clock, Instagram, Facebook, Dumbbell, Users, Heart, Zap, ChevronDown, Mail, Phone, Star, Quote, HelpCircle, ChevronLeft, ChevronRight, Send, Check, GlassWater, Droplets, ShieldCheck, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
-import logo from "@/assets/logo.webp";
-import heroBg from "@/assets/hero-bg.webp";
 import glavnaTeretana from "@/assets/glavna-teretana.webp";
 import glavnaTeretana2 from "@/assets/glavna-teretana-2.webp";
 import glavnaTeretana3 from "@/assets/glavna-teretana-3.webp";
@@ -18,6 +16,9 @@ import Gallery from "@/components/Gallery";
 import ScrollProgress from "@/components/ScrollProgress";
 import CounterSection from "@/components/CounterSection";
 import OstalaPonuda from "@/components/OstalaPonuda";
+
+const logoSrc = "/logo.webp";
+const heroBgSrc = "/hero-bg.webp";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,10 +41,13 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <a href="#" className="logo-glow-wrap rounded-full transition-all duration-300 cursor-pointer">
             <img
-              src={logo}
+              src={logoSrc}
               alt="Plavi Mačak"
               width={44}
               height={44}
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
               className="rounded-full shadow-warm transition-transform duration-300 hover:scale-110 relative z-10"
             />
           </a>
@@ -126,12 +130,12 @@ const Hero = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroBg}
+            src={heroBgSrc}
             alt="Plavi Mačak Fitness teretana"
             className="w-full h-full object-cover object-center scale-110 blur-[2px]"
             loading="eager"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
             style={{ transform: `translateY(${offsetY * 0.3}px) scale(1.1)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0_0%_0%/0.7)] via-[hsl(0_0%_0%/0.5)] to-[hsl(0_0%_0%/0.8)]" />
@@ -139,10 +143,13 @@ const Hero = () => {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-[fade-in-up_1s_ease-out]">
           <img
-            src={logo}
+            src={logoSrc}
             alt="Logo"
             width={110}
             height={110}
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="mx-auto mb-8 drop-shadow-2xl rounded-full animate-[fade-in-up_0.8s_ease-out]"
           />
            <h1 className="text-5xl md:text-7xl font-black tracking-tight font-heading mb-4 text-[hsl(0_0%_100%)] uppercase">
@@ -200,7 +207,7 @@ const Hero = () => {
                   <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+                        <img src={logoSrc} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
                       </div>
                       <div>
                         <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
@@ -229,7 +236,7 @@ const Hero = () => {
                   <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid #333' }}>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
-                        <img src={logo} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
+                        <img src={logoSrc} alt="Plavi Mačak" className="w-full h-full rounded-full object-cover bg-black" />
                       </div>
                       <div>
                         <p className="text-sm font-semibold leading-tight text-white">plavi_macak_fitness</p>
@@ -973,7 +980,7 @@ const Footer = () => (
         <div className="text-center md:text-left">
           <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
             <img
-              src={logo}
+              src={logoSrc}
               alt="Plavi Mačak"
               width={48}
               height={48}

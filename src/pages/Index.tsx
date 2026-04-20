@@ -842,15 +842,18 @@ const Contact = () => (
                   <a href="mailto:info@cardaci.ba" className="text-gray-600 text-sm hover:text-primary transition-colors">info@cardaci.ba</a>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group cursor-default">
+              <a
+                href="tel:+38763690014"
+                className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl px-6 py-5 flex items-center gap-4 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500 group cursor-pointer"
+              >
                 <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900">Telefon</h4>
-                  <a href="tel:+38763690014" className="text-gray-600 text-sm hover:text-primary transition-colors">+387 63 690 014</a>
+                  <p className="text-gray-600 text-sm group-hover:text-primary transition-colors">+387 63 690 014</p>
                 </div>
-              </div>
+              </a>
               <div className="bg-gradient-to-br from-white to-[hsl(42_85%_85%)] rounded-2xl p-6 border border-border/50 shadow-warm hover:shadow-glow hover:-translate-y-1 hover:border-primary/50 transition-all duration-500">
                 <h4 className="font-bold text-sm uppercase tracking-wider text-gray-900 mb-5">Pratite nas</h4>
                 <div className="grid grid-cols-2 gap-3">

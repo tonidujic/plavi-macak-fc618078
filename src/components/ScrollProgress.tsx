@@ -26,10 +26,10 @@ const ScrollProgress = () => {
       {/* Floating social buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <a
-          href="https://wa.me/38763690014"
+          href="https://wa.me/38763690014?text=Pozdrav%2C%20zanima%20me%20Va%C5%A1a%20ponuda."
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 group"
+          className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 group cursor-pointer"
           aria-label="WhatsApp"
         >
           <svg viewBox="0 0 24 24" className="w-7 h-7 fill-primary-foreground group-hover:scale-110 transition-transform duration-300">
